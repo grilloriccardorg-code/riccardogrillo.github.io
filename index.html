@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Riccardo Grillo — CV</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Riccardo Grillo — Architetto, BIM Coordinator e Computational Designer. Esperienza nelle infrastrutture, BIM, modellazione parametrica, ricerca e innovazione digitale.">
+<meta name="author" content="Riccardo Grillo">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="preload" href="assets/fonts/OpenSans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Layout: colonna etichetta (240px) + colonna contenuto, fasce alternate bianco / #F5F5F5, contatti su nero.
+   Palette e tipografia originali v.03.2 — tema unico chiaro, scelta deliberata (vincolo di progetto). */
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:300 800;font-stretch:100%;font-display:swap;src:url("assets/fonts/OpenSans-latin.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{
+  --white:#FFFFFF; --ink:#111111; --band:#F5F5F5;
+  --line:#DDDDDD; --line-2:#D4D4D4; --line-3:#E4E4E4; --seg-off:#CFCFCF; --soft:#BDBDBD;
+  --mute:#5F5F5F; --text-2:#444444; --text:#333333; --text-hero:#2B2B2B; --text-dark:#222222;
+  --hover-dark:#333333; --ghost:#2A2A2A; --foot-line:#3A3A3A; --on-dark:#D9D9D9; --on-dark-2:#CFCFCF; --dash:#8A8A8A;
+  --font:'Open Sans',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --wrap:1200px;
+  --gut:clamp(20px,5vw,64px);
+  --sec-pad:clamp(56px,8vw,104px);
+  --header-h:72px;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 12px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:70;background:var(--white)}
+img{max-width:100%;display:block}
+a{color:var(--ink)}
+a:hover{color:var(--mute)}
+button{font-family:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+::selection{background:var(--ink);color:var(--white)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--ink);color:var(--white);padding:10px 16px;font-size:14px;font-weight:600;text-decoration:none;border-radius:2px}
+.skip:focus{top:12px;color:var(--white)}
+b,strong{font-weight:600;color:var(--ink)}
+
+/* ---------- contenitori ---------- */
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(var(--gut),env(safe-area-inset-left,0px));padding-right:max(var(--gut),env(safe-area-inset-right,0px))}
+.band{background:var(--band)}
+.sec{padding-block:var(--sec-pad)}
+.split{display:flex;flex-wrap:wrap;gap:24px 64px}
+.split__label{flex:1 1 180px;max-width:240px}
+.split__body{flex:999 1 480px;min-width:0;display:flex;flex-direction:column}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.split__label .eyebrow{position:sticky;top:calc(var(--header-h) + 24px)}
+.label{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.num{font-variant-numeric:tabular-nums}
+
+/* ---------- bottoni ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 28px;font-size:15px;font-weight:600;text-decoration:none;border-radius:2px;border:1px solid var(--ink);cursor:pointer;transition:background-color .18s ease,color .18s ease,border-color .18s ease;white-space:nowrap}
+.btn svg{width:16px;height:16px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.btn--dark{background:var(--ink);color:var(--white)}
+.btn--dark:hover{background:var(--hover-dark);border-color:var(--hover-dark);color:var(--white)}
+.btn--line{background:transparent;color:var(--ink)}
+.btn--line:hover{background:var(--ink);color:var(--white)}
+.btn--sm{min-height:36px;padding:0 16px;font-size:13px}
+.btn--light{background:var(--white);color:var(--ink);border-color:var(--white);min-height:52px;padding:0 32px;font-size:16px}
+.btn--light:hover{background:var(--line-3);border-color:var(--line-3);color:var(--ink)}
+.btn--ghost{background:transparent;color:var(--white);border-color:var(--white);min-height:52px;padding:0 32px;font-size:16px}
+.btn--ghost:hover{background:var(--ghost);color:var(--white)}
+.link{margin:0;padding:0;border:0;background:none;font:inherit;cursor:pointer;color:var(--ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;display:inline-flex;align-items:center;gap:6px}
+.link:hover{color:var(--mute)}
+.link svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- header ---------- */
+.header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(255,255,255,.94);-webkit-backdrop-filter:saturate(1.2) blur(10px);backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid transparent;transition:border-color .2s ease}
+.header.is-scrolled{border-bottom-color:var(--line)}
+.header__in{min-height:var(--header-h);display:flex;align-items:center;justify-content:space-between;gap:16px 32px}
+.brand{font-size:15px;font-weight:700;letter-spacing:-.01em;text-decoration:none;color:var(--ink);white-space:nowrap}
+.nav{display:flex;align-items:center;gap:4px 24px;font-size:14px}
+.nav a{position:relative;text-decoration:none;color:var(--text-2);padding:6px 0;white-space:nowrap}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.nav a:hover{color:var(--ink)}
+.nav a:hover::after,.nav a[aria-current="true"]::after{transform:scaleX(1)}
+.nav a[aria-current="true"]{color:var(--ink)}
+.header__tools{display:flex;align-items:center;gap:12px}
+.lang{display:flex;gap:4px}
+.lang button{padding:0 12px;min-height:36px;min-width:44px;border:1px solid var(--soft);background:var(--white);color:var(--ink);font-size:13px;font-weight:600;letter-spacing:.06em;border-radius:2px;cursor:pointer;transition:background-color .15s,color .15s,border-color .15s}
+.lang button[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--white)}
+.lang button:not([aria-pressed="true"]):hover{border-color:var(--ink)}
+.menu-btn{display:none;min-height:36px;padding:0 14px;border:1px solid var(--ink);background:var(--white);font-size:13px;font-weight:600;border-radius:2px;cursor:pointer;align-items:center;gap:8px}
+.menu-btn span{display:block;width:14px;height:1px;background:var(--ink);box-shadow:0 -4px 0 var(--ink),0 4px 0 var(--ink)}
+.menu-btn[aria-expanded="true"] span{box-shadow:none}
+.drawer{border-top:1px solid var(--line);background:var(--white)}
+.drawer ol{list-style:none;margin:0;padding:8px 0 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:0 32px}
+.drawer a{display:flex;gap:14px;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--line-3);text-decoration:none;font-size:16px;font-weight:600;color:var(--ink)}
+.drawer a span{flex:0 0 22px;font-size:12px;font-weight:600;color:var(--mute);font-variant-numeric:tabular-nums}
+@media (max-width:1180px){.nav{display:none}.menu-btn{display:inline-flex}}
+@media (max-width:560px){
+  :root{--header-h:64px}
+  .header__tools .btn--sm{display:none}
+  .brand{font-size:14px}
+}
+
+/* ---------- hero ---------- */
+.hero{padding-block:clamp(40px,7vw,96px) clamp(56px,8vw,96px)}
+.hero__grid{display:flex;flex-wrap:wrap;align-items:flex-end;gap:48px 64px}
+.hero__text{flex:1 1 460px;min-width:0}
+.hero__role{margin:0 0 28px;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.hero h1{margin:0;font-size:clamp(52px,9.5vw,128px);line-height:.94;font-weight:700;letter-spacing:-.045em;color:var(--ink)}
+.hero__line{margin:40px 0 0;max-width:600px;font-size:clamp(18px,2vw,22px);line-height:1.55;font-weight:300;color:var(--text-hero);text-wrap:pretty}
+.hero__cta{margin-top:36px;display:flex;flex-wrap:wrap;gap:12px 16px}
+.hero__photo{flex:0 1 360px;width:100%;max-width:380px}
+.hero__photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 12%;background:var(--line-3);border-radius:2px}
+.facts{margin-top:clamp(56px,8vw,96px);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:0 40px}
+.fact{padding:24px 0;border-bottom:1px solid var(--line)}
+.fact__v{margin-top:8px;font-size:16px;font-weight:600;color:var(--ink)}
+.fact__s{margin-top:2px;font-size:14px;color:var(--mute)}
+@media (prefers-reduced-motion:no-preference){
+  .hero__text>*,.hero__photo{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+  .hero__text>:nth-child(2){animation-delay:.06s}.hero__text>:nth-child(3){animation-delay:.12s}.hero__text>:nth-child(4){animation-delay:.18s}.hero__photo{animation-delay:.1s}
+  @keyframes rise{from{opacity:.001;transform:translateY(14px)}to{opacity:1;transform:none}}
+}
+
+/* ---------- profilo ---------- */
+.profile{gap:24px}
+.profile__lead{margin:0;font-size:clamp(22px,2.6vw,30px);line-height:1.4;font-weight:300;letter-spacing:-.01em;color:var(--ink);max-width:760px;text-wrap:pretty}
+.profile__lead b{font-weight:600}
+.profile__body{margin:0;font-size:16px;line-height:1.75;color:var(--text);max-width:680px;text-wrap:pretty}
+.pillars{margin:8px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(210px,100%),1fr));gap:0 32px;max-width:760px}
+.pillars li{padding:12px 0;border-top:1px solid var(--line-2);font-size:14px;font-weight:600;color:var(--ink);display:flex;gap:12px;align-items:baseline}
+.pillars li span{font-size:12px;color:var(--mute);font-variant-numeric:tabular-nums}
+
+/* ---------- liste con trattino ---------- */
+.dash{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px;max-width:680px}
+.dash li{display:flex;gap:14px;font-size:15px;line-height:1.65;color:var(--text)}
+.dash li::before{content:"";flex:0 0 14px;margin-top:12px;height:1px;background:var(--ink)}
+.dash--sm{gap:6px}
+.dash--sm li{gap:10px;font-size:14px;line-height:1.6}
+.dash--sm li::before{flex-basis:10px;margin-top:11px}
+
+/* ---------- esperienza ---------- */
+.job{display:flex;flex-wrap:wrap;gap:12px 40px;padding:36px 0;border-top:1px solid var(--line)}
+.job:last-child{border-bottom:1px solid var(--line)}
+.job__date{flex:0 0 150px;font-size:14px;font-weight:600;color:var(--mute)}
+.job__main{flex:1 1 320px;min-width:0}
+.job h3{margin:0;font-size:22px;line-height:1.3;font-weight:600;letter-spacing:-.01em;color:var(--ink);text-wrap:balance}
+.job__org{margin-top:2px;font-size:16px;color:var(--text-2)}
+.job__summary{margin:16px 0 0;font-size:15px;line-height:1.7;color:var(--text);max-width:640px}
+.job .dash{margin-top:20px}
+.groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:28px 40px;margin-top:24px}
+.group .dash{margin-top:12px}
+.group--wide{grid-column:1/-1}
+.commesse{margin-top:36px;padding:clamp(18px,3vw,32px);background:var(--band);border-radius:2px}
+.commesse__head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 16px}
+.commesse__note{font-size:13px;color:var(--mute)}
+.commesse ol{margin:12px 0 0;padding:0;list-style:none}
+.pr{display:flex;gap:16px;padding:16px 0;border-top:1px solid var(--line-2)}
+.pr__n{flex:0 0 26px;font-size:13px;font-weight:600;color:var(--mute);padding-top:2px;font-variant-numeric:tabular-nums}
+.pr__b{flex:1 1 auto;min-width:0}
+.pr__t{font-size:15px;line-height:1.4;font-weight:700;color:var(--ink)}
+.pr__d{margin-top:4px;font-size:14px;line-height:1.65;color:var(--text)}
+.pr .dash{margin-top:8px}
+.pr__tags{margin-top:8px;font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--mute)}
+.pr__link{margin-top:8px;font-size:14px}
+.others{margin-top:24px}
+.others ul{margin:12px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.others li{font-size:14px;line-height:1.55;color:var(--text)}
+.privacy{margin:20px 0 0;font-size:13px;line-height:1.6;color:var(--mute);max-width:640px}
+
+/* ---------- progetti (mappa) ---------- */
+.proj-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 48px;margin-bottom:clamp(32px,5vw,56px)}
+.proj-head h2{margin:16px 0 0;font-size:clamp(32px,5vw,56px);line-height:1.05;font-weight:700;letter-spacing:-.035em;color:var(--ink);text-wrap:balance}
+.proj-head p{margin:0;max-width:420px;font-size:15px;line-height:1.65;color:var(--text-2)}
+.pj-stage{position:relative;aspect-ratio:1000/551;width:100%;max-width:100%}
+.pj-map{position:absolute;left:0;top:0;width:64%;height:100%}
+.pj-map>img{position:absolute;inset:0;width:100%;height:100%}
+.pj-arcs{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+.pj-arcs path{fill:none;vector-effect:non-scaling-stroke;stroke:var(--ink);stroke-width:1px;opacity:.85;transition:opacity .2s,stroke-width .2s}
+.pj-stage.has-hot .pj-arcs path{opacity:.22}
+.pj-stage.has-hot .pj-arcs path.is-hot{opacity:1;stroke-width:2px}
+.mk{position:absolute;transform:translate(-50%,-50%);width:32px;height:32px;padding:0;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2}
+.mk i{display:block;width:11px;height:11px;border-radius:50%;background:#000;box-shadow:0 0 0 2px var(--white);transition:width .18s,height .18s}
+.mk.is-hot{z-index:3}.mk.is-hot i{width:16px;height:16px}
+.pj-row{position:absolute;left:69.5%;width:30.5%;top:var(--y);transform:translateY(-50%)}
+.pj-row button{display:block;width:100%;text-align:left;min-height:52px;padding:8px 0 8px 14px;border:0;border-left:2px solid #D0D0D0;background:transparent;cursor:pointer;transition:border-color .18s}
+.pj-row button.is-hot{border-left-color:#000}
+.pj-row__n{display:block;font-size:16px;line-height:1.3;font-weight:600;color:var(--ink)}
+.pj-row__s{display:block;margin-top:3px;font-size:12.5px;line-height:1.45;color:var(--mute)}
+.pj-row__c{display:flex;align-items:center;gap:8px;margin-top:3px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+.pj-row__c em{font-style:normal;font-weight:600;color:var(--mute);letter-spacing:.06em}
+@media (max-width:860px){
+  .pj-stage{aspect-ratio:auto;display:flex;flex-direction:column;gap:12px}
+  .pj-map{position:relative;width:100%;height:auto;aspect-ratio:1000/861;margin-bottom:12px}
+  .pj-arcs{display:none}
+  .pj-row{position:static;width:auto;transform:none}
+}
+
+/* ---------- competenze ---------- */
+.skills{gap:56px}
+.card{background:var(--white);padding:clamp(20px,3vw,36px);border-radius:2px}
+.card__head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 24px;padding-bottom:20px;border-bottom:1px solid var(--ink)}
+.card__head h3{margin:0;font-size:22px;line-height:1.3;font-weight:600;letter-spacing:-.01em;color:var(--ink)}
+.lvl{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text-2)}
+.lvl b{font-size:14px}
+.segs{display:flex;gap:3px}
+.segs i{display:block;width:18px;height:6px;border-radius:1px;background:var(--seg-off)}
+.segs i.on{background:var(--ink)}
+.sk{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 32px;padding:18px 0;border-bottom:1px solid var(--line-3)}
+.sk:last-child{border-bottom:0;padding-bottom:0}
+.sk__n{flex:0 0 160px;font-size:16px;font-weight:600;color:var(--ink)}
+.sk__l{flex:0 0 190px;display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text-2)}
+.sk__l>span:first-child{min-width:72px}
+.sk__d{flex:1 1 260px;min-width:0;font-size:15px;line-height:1.6;color:var(--text)}
+.sk__d .dash{margin-top:12px;gap:8px}
+.sk__d .dash li{font-size:14px;line-height:1.6;gap:10px}
+.sk__d .dash li::before{flex-basis:10px;margin-top:11px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:0 48px}
+.cell{padding:24px 0;border-top:1px solid var(--line-2)}
+.cell__h{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 16px}
+.cell h3{margin:0;font-size:16px;font-weight:600;color:var(--ink)}
+.cell p{margin:8px 0 0;font-size:14px;line-height:1.6;color:var(--text-2)}
+.cell--ai{padding:18px 0}
+.cell--ai p{margin-top:6px}
+.note{margin:12px 0 0;max-width:680px;font-size:14px;line-height:1.6;color:var(--text-2)}
+.chips{margin:16px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:10px}
+.chips li{padding:8px 14px;border:1px solid var(--ink);border-radius:2px;font-size:14px;font-weight:600;color:var(--ink);background:var(--white)}
+.lower{display:flex;flex-wrap:wrap;gap:40px 64px}
+.lower>div:first-child{flex:2 1 360px;min-width:0}
+.lower>div:last-child{flex:1 1 240px;min-width:0}
+.langs{margin:16px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.langs li{display:flex;justify-content:space-between;gap:16px;padding-bottom:8px;border-bottom:1px solid var(--line-2);font-size:15px}
+.langs li span:first-child{font-weight:600;color:var(--ink)}
+.langs li span:last-child{color:var(--text-2)}
+
+/* ---------- ricerca ---------- */
+.pub{padding:28px 0;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px 40px}
+.pub:last-child{border-bottom:1px solid var(--line)}
+.pub__k{flex:0 0 150px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);padding-top:4px}
+.pub__b{flex:1 1 320px;min-width:0}
+.pub h3{margin:0;font-size:19px;line-height:1.4;font-weight:600;letter-spacing:-.005em;color:var(--ink);text-wrap:balance}
+.pub__au{margin-top:6px;font-size:14px;color:var(--text)}
+.pub__v{margin-top:2px;font-size:15px;color:var(--text-2)}
+.pub__act{margin-top:14px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.pub__act a,.pub__act .link{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+.pub__act a{display:inline-flex;align-items:center;gap:6px;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+.pub__act svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- certificazioni ---------- */
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:16px}
+.cert{background:var(--white);border-radius:2px;padding:24px;display:flex;flex-direction:column;gap:6px}
+.cert__k{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.cert h3{margin:0;padding-top:20px;font-size:20px;line-height:1.3;font-weight:600;letter-spacing:-.01em;color:var(--ink)}
+.cert__o{font-size:14px;color:var(--text-2);min-height:1.4em}
+
+/* ---------- didattica / formazione / interessi ---------- */
+.teach{gap:32px}
+.lead{margin:0;font-size:clamp(20px,2.2vw,26px);line-height:1.45;font-weight:300;letter-spacing:-.01em;max-width:700px;color:var(--ink);text-wrap:pretty}
+.yr{display:flex;flex-wrap:wrap;gap:12px 40px;padding:28px 0;border-top:1px solid var(--line-2)}
+.yr:last-child{border-bottom:1px solid var(--line-2)}
+.yr__y{flex:0 0 150px;font-size:14px;font-weight:600;color:var(--ink)}
+.yr ul{flex:1 1 320px;min-width:0;margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:18px}
+.yr__t{font-size:16px;line-height:1.4;font-weight:600;color:var(--ink)}
+.yr__m{margin-top:3px;font-size:14px;line-height:1.55;color:var(--text-2)}
+.edu{display:flex;flex-wrap:wrap;gap:12px 40px;padding:32px 0;border-top:1px solid var(--line)}
+.edu:last-child{border-bottom:1px solid var(--line)}
+.edu h3{margin:0;font-size:20px;line-height:1.35;font-weight:600;letter-spacing:-.01em;color:var(--ink)}
+.interests{flex-direction:row;flex-wrap:wrap;gap:40px 64px}
+.interests>div:first-child{flex:2 1 360px;min-width:0}
+.interests>div:last-child{flex:1 1 200px;min-width:0}
+.plain{margin:16px 0 0;padding:0;list-style:none}
+.plain--grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:0 32px}
+.plain li{padding:12px 0;border-bottom:1px solid var(--line-2);font-size:15px;color:var(--ink)}
+
+/* ---------- contatti ---------- */
+.contact{background:var(--ink);color:var(--white)}
+.contact .sec{padding-block:clamp(64px,10vw,128px) clamp(40px,6vw,64px)}
+.contact .eyebrow{color:var(--soft)}
+.contact h2{margin:24px 0 0;font-size:clamp(40px,7vw,96px);line-height:1;font-weight:700;letter-spacing:-.04em;color:var(--white);max-width:900px;text-wrap:balance}
+.contact p{margin:32px 0 0;max-width:560px;font-size:18px;line-height:1.6;font-weight:300;color:var(--on-dark)}
+.contact__cta{margin-top:40px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 20px}
+.contact__cta .btn{white-space:normal;text-align:center}
+.foot{margin-top:clamp(56px,8vw,104px);padding-top:24px;border-top:1px solid var(--foot-line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-size:13px;color:var(--soft)}
+.foot a{color:var(--soft)}
+
+/* ---------- dialoghi ---------- */
+dialog{padding:0;border:0;max-width:none;max-height:none}
+dialog::backdrop{background:rgba(17,17,17,.66)}
+.dlg-plates{width:100%;height:100%;margin:0;background:rgba(17,17,17,.97);color:var(--white)}
+.dlg-plates::backdrop{background:rgba(17,17,17,.97)}
+.plates{height:100%;display:flex;flex-direction:column;gap:16px;padding:calc(clamp(14px,3vw,32px) + env(safe-area-inset-top,0px)) max(clamp(14px,3vw,32px),env(safe-area-inset-right,0px)) calc(clamp(14px,3vw,32px) + env(safe-area-inset-bottom,0px)) max(clamp(14px,3vw,32px),env(safe-area-inset-left,0px))}
+.plates__top{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:12px 24px}
+.plates__top h3{margin:0;font-size:clamp(20px,3vw,28px);line-height:1.2;font-weight:600;letter-spacing:-.01em;color:var(--white)}
+.plates__sub{margin-top:6px;font-size:14px;line-height:1.5;color:var(--on-dark-2)}
+.btn-close{min-height:44px;padding:0 22px;border:1px solid var(--white);background:transparent;color:var(--white);font-size:14px;font-weight:600;border-radius:2px;cursor:pointer}
+.btn-close:hover{background:var(--ghost)}
+.btn-close--dark{border-color:var(--ink);background:var(--white);color:var(--ink)}
+.btn-close--dark:hover{background:var(--ink);color:var(--white)}
+.plates__stage{flex:1 1 auto;min-height:0;display:flex;align-items:center;justify-content:center;touch-action:pan-y}
+.plates__stage img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;background:var(--white);transition:opacity .2s ease}
+.plates__stage img.is-loading{opacity:.35}
+.plates__nav{display:flex;align-items:center;justify-content:center;gap:20px}
+.circle{width:48px;height:48px;border:1px solid var(--white);background:transparent;color:var(--white);border-radius:50%;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+.circle:hover{background:var(--ghost)}
+.circle svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.plates__count{min-width:120px;text-align:center;font-size:14px;font-weight:600;letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.dlg-pub{width:min(800px,calc(100% - 24px));margin:clamp(12px,4vw,48px) auto;background:var(--white);color:var(--ink);border-radius:2px;max-height:calc(100% - 2*clamp(12px,4vw,48px))}
+.pubd{padding:clamp(22px,4vw,48px)}
+.pubd__top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px}
+.pubd h3{margin:24px 0 0;font-size:clamp(22px,3vw,30px);line-height:1.25;font-weight:600;letter-spacing:-.015em;color:var(--ink);text-wrap:balance}
+.pubd__alt{margin-top:8px;font-size:15px;line-height:1.5;font-style:italic;color:var(--text-2)}
+.pubd__au{margin:16px 0 0;font-size:16px;line-height:1.6;color:var(--text-dark)}
+.pubd dl{margin:28px 0 0}
+.pubd dl>div{display:flex;flex-wrap:wrap;gap:4px 24px;padding:14px 0;border-top:1px solid var(--line-3)}
+.pubd dl>div:last-child{border-bottom:1px solid var(--line-3)}
+.pubd dt{flex:0 0 150px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);padding-top:2px}
+.pubd dd{flex:1 1 260px;min-width:0;margin:0;font-size:15px;line-height:1.55;color:var(--ink);overflow-wrap:anywhere}
+.pubd__sec{margin-top:28px}
+.pubd__sec p{margin:10px 0 0;font-size:15px;line-height:1.75;color:var(--text)}
+.cite{margin-top:10px;padding:18px 20px;background:var(--band);font-size:14px;line-height:1.7;color:var(--text-dark);overflow-wrap:anywhere;user-select:all}
+.pubd__note{margin:24px 0 0;padding:14px 16px;border:1px dashed var(--dash);font-size:14px;line-height:1.6;color:var(--text)}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);opacity:0;pointer-events:none;background:var(--ink);color:var(--white);padding:12px 18px;font-size:14px;font-weight:600;border-radius:2px;z-index:90;transition:opacity .2s,transform .2s;max-width:calc(100% - 32px)}
+.toast.is-on{opacity:1;transform:translate(-50%,0)}
+
+@media (max-width:640px){
+  .job__date,.yr__y,.pub__k{flex-basis:100%}
+  .sk__n,.sk__l{flex-basis:auto}
+  .split__label .eyebrow{position:static}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+@media print{
+  .header,.skip,.hero__cta,.contact__cta,.menu-btn{display:none!important}
+  .band{background:none}
+}
+
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Vai al contenuto</a>
+<header class="header" id="header">
+  <div class="wrap header__in"><a class="brand" href="#top">Riccardo Grillo</a><a class="btn btn--line btn--sm" href="assets/docs/Riccardo_Grillo_CV_IT_Art.pdf" download="Riccardo_Grillo_CV_IT_Art.pdf">Esporta CV</a></div>
+</header>
+<main id="main" tabindex="-1">
+  <noscript>
+    <div class="wrap sec">
+      <h1 style="margin:0;font-size:56px;line-height:1;letter-spacing:-.04em">Riccardo Grillo</h1>
+      <p class="hero__role" style="margin-top:16px">Architetto · BIM Coordinator · Computational Designer</p>
+      <p>Per la versione completa del sito abilita JavaScript. Il curriculum è disponibile in PDF.</p>
+      <p><a class="btn btn--dark" href="assets/docs/Riccardo_Grillo_CV_IT_Art.pdf" download="Riccardo_Grillo_CV_IT_Art.pdf">Esporta CV</a> &nbsp; <a href="mailto:grilloriccardo.rg@gmail.com">grilloriccardo.rg@gmail.com</a></p>
+    </div>
+  </noscript>
+</main>
+
+<dialog id="dlg-plates" class="dlg-plates" aria-labelledby="plate-title">
+  <div class="plates">
+    <div class="plates__top">
+      <div style="min-width:0"><h3 id="plate-title"></h3><div class="plates__sub" id="plate-sub"></div></div>
+      <button type="button" class="btn-close" id="plate-close">Chiudi</button>
+    </div>
+    <div class="plates__stage"><img id="plate-img" alt="" decoding="async"></div>
+    <div class="plates__nav">
+      <button type="button" class="circle" id="plate-prev" aria-label="Tavola precedente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="plates__count" id="plate-count" aria-live="polite"></div>
+      <button type="button" class="circle" id="plate-next" aria-label="Tavola successiva"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+</dialog>
+<dialog id="dlg-pub" class="dlg-pub" aria-labelledby="pub-title"><div class="pubd" id="pub-body"></div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* =========================================================
+   CONTENUTI — Riccardo Grillo · CV (IT / EN)
+   Modificare qui i testi: il layout viene generato da app.js.
+   Sintassi: **testo** = grassetto.
+   ========================================================= */
+const CV_PDF = { href: 'assets/docs/Riccardo_Grillo_CV_IT_Art.pdf', name: 'Riccardo_Grillo_CV_IT_Art.pdf' };
+const EMAIL = 'grilloriccardo.rg@gmail.com';
+const LINKEDIN = 'https://www.linkedin.com/in/riccardo-grillo-36530a1a7';
+
+/* Progetti accademici — tavole dal Portfolio (spread A3). lon/lat posizionano il punto sulla mappa. */
+const PROJECTS = [
+  { id: 'glamping', name: 'Glamping benessere', plates: 6, lon: 6.95, lat: 45.713,
+    course: { it: 'Atelier — Il progetto sostenibile di architettura', en: 'Studio — Sustainable architectural design' },
+    place: { it: 'La Thuile (AO)', en: 'La Thuile (AO)' } },
+  { id: 'mdv', name: 'MDV — Vertical Link', plates: 8, lon: 7.633, lat: 45.136,
+    course: { it: 'Atelier — Compatibilità e sostenibilità del restauro', en: 'Studio — Compatibility and sustainability of restoration' },
+    place: { it: 'Venaria Reale (TO)', en: 'Venaria Reale (TO)' } },
+  { id: 'move', name: 'Move is MoRe', plates: 4, lon: 7.687, lat: 45.07,
+    course: { it: 'Atelier — Progetto e rappresentazione', en: 'Studio — Design and representation' },
+    place: { it: 'Torino', en: 'Turin' } },
+  { id: 'corrido', name: 'CORRIDÒ', plates: 2, lon: 7.686, lat: 45.053, dx: 1.9, dy: 2.8,
+    course: { it: 'Workshop di autocostruzione AUT PoliTo', en: 'AUT PoliTo self-build workshop' },
+    place: { it: 'Torino — Parco del Valentino', en: 'Turin — Parco del Valentino' } },
+  { id: 'woodwaves', name: 'WOODWAVES', plates: 10, lon: 14.25, lat: 37.067,
+    course: { it: 'Advanced parametric modeling of building envelope', en: 'Advanced parametric modeling of building envelope' },
+    place: { it: 'Gela (CL)', en: 'Gela (CL)' } },
+  { id: 'grasshopper', name: 'Grasshopper', plates: 2, located: false,
+    course: { it: 'Corso magistrale «Diseño Geométrico Paramétrico asistido por ordenador»', en: 'Master’s course “Diseño Geométrico Paramétrico asistido por ordenador”' },
+    place: { it: 'Realizzato durante l’Erasmus', en: 'Developed during the Erasmus exchange' },
+    short: { it: 'Corso magistrale svolto durante l’Erasmus', en: 'Master’s course taken during the Erasmus exchange' },
+    note: { it: 'Progetto non localizzato', en: 'Not tied to a location' } }
+];
+
+/* Pubblicazioni — ordine cronologico inverso */
+const PUBS = [
+  { kind: { it: 'Articolo su rivista', en: 'Journal article' },
+    title: 'Integrazione tra BIM, LCA e Intelligenza Artificiale: verso una progettazione sostenibile e data-driven',
+    authors: 'Riccardo Grillo, Adhavan Surendiran',
+    venue: { it: 'Le Strade · n. 1621 · ottobre 2026 · pp. 31–37', en: 'Le Strade · no. 1621 · October 2026 · pp. 31–37' },
+    fields: { it: [['Rivista', 'Le Strade'], ['Numero', '1621'], ['Data', 'ottobre 2026'], ['Pagine', '31–37'], ['Coautore', 'Adhavan Surendiran'], ['URL', 'lestradeweb.it/rivista/lestrade-n.-1621-ottobre-2026', 'https://www.lestradeweb.it/rivista/lestrade-n.-1621-ottobre-2026']],
+              en: [['Journal', 'Le Strade'], ['Issue', '1621'], ['Date', 'October 2026'], ['Pages', '31–37'], ['Co-author', 'Adhavan Surendiran'], ['URL', 'lestradeweb.it/rivista/lestrade-n.-1621-ottobre-2026', 'https://www.lestradeweb.it/rivista/lestrade-n.-1621-ottobre-2026']] },
+    cta: { it: 'Apri la pagina della rivista', en: 'Open the magazine page', href: 'https://www.lestradeweb.it/rivista/lestrade-n.-1621-ottobre-2026' },
+    apa: { it: 'Grillo, R., & Surendiran, A. (2026, ottobre). Integrazione tra BIM, LCA e Intelligenza Artificiale: verso una progettazione sostenibile e data-driven. Le Strade, (1621), 31–37. https://www.lestradeweb.it/rivista/lestrade-n.-1621-ottobre-2026',
+           en: 'Grillo, R., & Surendiran, A. (2026, October). Integrazione tra BIM, LCA e Intelligenza Artificiale: verso una progettazione sostenibile e data-driven. Le Strade, (1621), 31–37. https://www.lestradeweb.it/rivista/lestrade-n.-1621-ottobre-2026' } },
+
+  { kind: { it: 'Atti di congresso', en: 'Conference paper' },
+    title: 'Ri/Progettazione ludica: analisi, ideazione, prototipazione e strategia di gioco',
+    alt: { it: 'Titolo negli atti: Playful Re-Design & Game Re-Design: Analysis, Ideation, Prototyping, and Game Strategy', en: 'Title in the proceedings: Playful Re-Design & Game Re-Design: Analysis, Ideation, Prototyping, and Game Strategy' },
+    authors: 'Ursula Zich, Andrea Tomalini, Fiorela Gibaja Gomez, Riccardo Grillo',
+    venue: { it: 'EDULEARN26 — IATED', en: 'EDULEARN26 — IATED' },
+    fields: { it: [['Congresso', '18th International Conference on Education and New Learning Technologies (EDULEARN26), Palma, Spagna, 29 giugno – 1 luglio 2026'], ['Atti', 'EDULEARN26 Proceedings, IATED · art. 1109 · ISBN 978-84-09-88444-5 · ISSN 2340-1117'], ['DOI', '10.21125/edulearn.2026.1109', 'https://doi.org/10.21125/edulearn.2026.1109'], ['URL', 'library.iated.org/view/ZICH2026PLA', 'https://library.iated.org/view/ZICH2026PLA']],
+              en: [['Conference', '18th International Conference on Education and New Learning Technologies (EDULEARN26), Palma, Spain, 29 June – 1 July 2026'], ['Proceedings', 'EDULEARN26 Proceedings, IATED · art. 1109 · ISBN 978-84-09-88444-5 · ISSN 2340-1117'], ['DOI', '10.21125/edulearn.2026.1109', 'https://doi.org/10.21125/edulearn.2026.1109'], ['URL', 'library.iated.org/view/ZICH2026PLA', 'https://library.iated.org/view/ZICH2026PLA']] },
+    cta: { it: 'Apri la scheda IATED', en: 'Open the IATED record', href: 'https://library.iated.org/view/ZICH2026PLA' },
+    abstract: { it: 'Corso di orientamento PCTO per le scuole superiori del Dipartimento di Architettura e Design del Politecnico di Torino: gli studenti hanno analizzato giochi esistenti (cubo di Rubik, Jenga), progettato varianti con modellazione 3D semplice e stampa FDM e le hanno testate in una giornata di gioco collettiva. Gamification e metodi di rappresentazione sviluppano competenze di modellazione e comprensione intuitiva della geometria descrittiva.',
+                en: 'A high-school outreach course (PCTO) run by the Department of Architecture and Design at Politecnico di Torino: students analysed existing games (the Rubik’s Cube and Jenga), designed variants with simple 3D modelling and FDM printing, and tested them on a collective play day. Combining gamification with representation methods builds modelling skills and an intuitive grasp of descriptive geometry.' },
+    apa: { it: 'Zich, U., Tomalini, A., Gibaja Gomez, F., & Grillo, R. (2026). Playful re-design & game re-design: Analysis, ideation, prototyping, and game strategy. EDULEARN26 Proceedings (art. 1109). IATED. https://doi.org/10.21125/edulearn.2026.1109' } },
+
+  { kind: { it: 'Articolo su rivista', en: 'Journal article' },
+    title: 'BIM-Integrated Parametric Modelling of Existing Box Girder Bridges Using Point Cloud Data',
+    authors: 'Adhavan Surendiran, Riccardo Grillo, Valentina Boretti, Mario Balestra, Davide Masera',
+    venue: { it: 'International Journal of Bridge Engineering, Management and Research · 2026', en: 'International Journal of Bridge Engineering, Management and Research · 2026' },
+    fields: { it: [['Rivista', 'International Journal of Bridge Engineering, Management and Research (ISSN 3065-0569)'], ['Anno', '2026 · Vol. 3, n. 2 · art. 21426005 · pubblicato il 10 aprile 2026'], ['DOI', '10.70465/ber.v3i1.75', 'https://doi.org/10.70465/ber.v3i1.75'], ['URL', 'ijbemr.org/index.php/ber/article/view/75', 'https://ijbemr.org/index.php/ber/article/view/75'], ['PDF', 'ijbemr.org/index.php/ber/article/view/75/123', 'https://ijbemr.org/index.php/ber/article/view/75/123'], ['Licenza', 'CC BY-NC-ND 4.0']],
+              en: [['Journal', 'International Journal of Bridge Engineering, Management and Research (ISSN 3065-0569)'], ['Year', '2026 · Vol. 3, no. 2 · art. 21426005 · published 10 April 2026'], ['DOI', '10.70465/ber.v3i1.75', 'https://doi.org/10.70465/ber.v3i1.75'], ['URL', 'ijbemr.org/index.php/ber/article/view/75', 'https://ijbemr.org/index.php/ber/article/view/75'], ['PDF', 'ijbemr.org/index.php/ber/article/view/75/123', 'https://ijbemr.org/index.php/ber/article/view/75/123'], ['License', 'CC BY-NC-ND 4.0']] },
+    cta: { it: 'Apri l’articolo', en: 'Open the article', href: 'https://ijbemr.org/index.php/ber/article/view/75' },
+    abstract: { it: 'Framework scan-to-BIM parametrico per ponti esistenti a cassone: da nuvole di punti fotogrammetriche da drone si estraggono tracciato e pendenze; sezioni e layout sono pilotati da parametri in un foglio di calcolo e inviati a Revit tramite Rhino.Inside.Revit. Testato su tre ponti, con scostamenti centimetrici (RMS 6,32–13,7 mm) e un guadagno di produttività riportato superiore al 75% rispetto alla modellazione manuale.',
+                en: 'A parametric scan-to-BIM framework for existing box-girder bridges: drone photogrammetry point clouds yield alignment and slope geometry; cross-sections and layout are driven by parameters held in a spreadsheet and pushed into Revit through Rhino.Inside.Revit. Tested on three bridges, with centimetre-level deviations (RMS 6.32–13.7 mm) and a reported productivity gain of over 75% compared with manual modelling.' },
+    apa: { it: 'Surendiran, A., Grillo, R., Boretti, V., Balestra, M., & Masera, D. (2026). BIM-Integrated Parametric Modelling of Existing Box Girder Bridges Using Point Cloud Data. International Journal of Bridge Engineering, Management and Research, 3(2), 21426005. https://doi.org/10.70465/ber.v3i1.75' } },
+
+  { kind: { it: 'Tesi di laurea magistrale', en: 'Master’s thesis' },
+    title: 'Intelligenza artificiale in Architettura. Sviluppo generativo di soluzioni distributive attraverso l’uso di GANN',
+    alt: { it: '', en: 'Artificial Intelligence in Architecture. Generative development of layout solutions using GANN' },
+    authors: 'Riccardo Grillo',
+    venue: { it: 'Politecnico di Torino · 2023 · Relatori: Massimiliano Lo Turco, Andrea Tomalini, Edoardo Pristeri', en: 'Politecnico di Torino · 2023 · Supervisors: Massimiliano Lo Turco, Andrea Tomalini, Edoardo Pristeri' },
+    fields: { it: [['Tipo', 'Tesi di laurea magistrale'], ['Corso di laurea', 'Architettura per il Progetto Sostenibile, Politecnico di Torino'], ['Anno', '2023 · voto 110/110'], ['Relatori', 'Massimiliano Lo Turco, Andrea Tomalini, Edoardo Pristeri'], ['URL', 'webthesis.biblio.polito.it/id/eprint/29820', 'https://webthesis.biblio.polito.it/id/eprint/29820']],
+              en: [['Type', 'Master’s thesis'], ['Degree course', 'Architecture for Sustainable Design, Politecnico di Torino'], ['Year', '2023 · grade 110/110'], ['Supervisors', 'Massimiliano Lo Turco, Andrea Tomalini, Edoardo Pristeri'], ['URL', 'webthesis.biblio.polito.it/id/eprint/29820', 'https://webthesis.biblio.polito.it/id/eprint/29820']] },
+    cta: { it: 'Consulta la tesi', en: 'Read the thesis', href: 'https://webthesis.biblio.polito.it/id/eprint/29820' },
+    apa: { it: 'Grillo, R. (2023). Intelligenza artificiale in Architettura. Sviluppo generativo di soluzioni distributive attraverso l’uso di GANN [Tesi di laurea magistrale, Politecnico di Torino]. Webthesis. https://webthesis.biblio.polito.it/id/eprint/29820',
+           en: 'Grillo, R. (2023). Intelligenza artificiale in Architettura. Sviluppo generativo di soluzioni distributive attraverso l’uso di GANN [Master’s thesis, Politecnico di Torino]. Webthesis. https://webthesis.biblio.polito.it/id/eprint/29820' },
+    note: { it: 'Il documento non è ospitato su questo sito: il collegamento apre la pagina ufficiale del Politecnico di Torino, che ne indica le condizioni di accesso.', en: 'The document is not hosted on this site: the link opens the official Politecnico di Torino page, which states the access conditions.' } }
+];
+
+const T = {
+  it: {
+    htmlLang: 'it',
+    skip: 'Vai al contenuto',
+    menu: 'Menu', menuClose: 'Chiudi',
+    nav: [['profilo', '01', 'Profilo'], ['esperienza', '02', 'Esperienza'], ['progetti', '03', 'Progetti'], ['competenze', '04', 'Competenze'], ['ricerca', '05', 'Ricerca'], ['certificazioni', '06', 'Certificazioni'], ['didattica', '07', 'Didattica'], ['formazione', '08', 'Formazione'], ['interessi', '09', 'Interessi'], ['contatti', '', 'Contatti']],
+    navMain: ['profilo', 'esperienza', 'progetti', 'competenze', 'ricerca', 'certificazioni', 'contatti'],
+    exportLabel: 'Esporta CV',
+    exportTitle: 'Scarica il CV in PDF (italiano, 2 pagine A4)',
+    exportSaved: 'CV salvato',
+    exportOpen: 'Il PDF si apre in una nuova scheda',
+    heroRole: 'Architetto · BIM Coordinator · Computational Designer',
+    heroLine: 'Coordino commesse BIM multidisciplinari nelle infrastrutture pubbliche e automatizzo i flussi di lavoro con Dynamo, Grasshopper e Rhino.Inside.Revit.',
+    cta: 'Scrivimi',
+    photoAlt: 'Ritratto di Riccardo Grillo',
+    facts: [['Ruolo attuale', 'BIM Coordinator', 'Masera Engineering Group, da giugno 2023'], ['Formazione', 'Laurea magistrale, 110/110', 'Politecnico di Torino'], ['Didattica', 'Tutor universitario', 'Politecnico di Torino, dal 2024/25']],
+
+    sProfile: 'Profilo',
+    profileLead: '**Architetto** specializzato in **BIM** e **Computational Design**, con esperienza nella **progettazione architettonica e infrastrutturale** e nel **coordinamento di commesse multidisciplinari** complesse nel settore delle **infrastrutture pubbliche**.',
+    profileBody: 'Gestisco e sviluppo **modelli BIM**, curo il **coordinamento informativo** dei team di progetto e ottimizzo i flussi di lavoro con la **modellazione parametrica e algoritmica** e l’**automazione dei processi** in Dynamo, Grasshopper e Rhino.Inside.Revit. In azienda partecipo alla Commissione BIM, alla Commissione Computi, all’AI Lab e al gruppo di **ricerca e sviluppo** dedicato all’**intelligenza artificiale** applicata ai processi di progettazione, tema che ho affrontato già nella tesi di laurea. Mi interessano il rilievo digitale, lo Scan-to-BIM e la fotogrammetria: ho modellato in BIM da nuvole di punti edifici esistenti e opere infrastrutturali, tra cui ponti e viadotti.',
+    pillars: ['Progettazione architettonica e infrastrutturale', 'BIM e coordinamento informativo', 'Modellazione parametrica e algoritmica', 'Automazione dei processi', 'Ricerca e sviluppo', 'IA applicata all’architettura'],
+
+    sExp: 'Esperienza',
+    jobs: [
+      { date: 'Giu 2023 — Oggi', role: 'Architetto — BIM Coordinator', org: 'Masera Engineering Group',
+        groups: [
+          ['Sviluppo e coordinamento BIM', [
+            'Sviluppo e aggiornamento di **modelli BIM** per il settore delle costruzioni, con integrazione di logiche **4D** (fasi e tempi di cantiere) e **5D** (computi dei costi).',
+            '**Modellazione** di elementi architettonici, strutturali e carpenterie.',
+            '**Parametrizzazione** e gestione dei **dati informativi**.',
+            'Redazione di **elaborati tecnici**, **report di interferenza** e **schede di controllo**; **clash detection su Navisworks** e controllo qualità dei parametri.',
+            '**Coordinamento operativo** delle risorse BIM di progetto, con supporto tecnico a 3–4 modellatori junior / BIM Specialist.',
+            'Definizione e diffusione di **standard, procedure e best practice per il BIM Data Management**, favorendo la centralizzazione del know-how interno.'
+          ]],
+          ['Computational Design e automazione', [
+            'Sviluppo di **algoritmi** in **Grasshopper**, **Dynamo** e **Rhino.Inside.Revit**.',
+            '**Automazione dei flussi di lavoro** e della compilazione dei parametri informativi.',
+            '**Ottimizzazione** dei processi di modellazione e di produzione degli elaborati.'
+          ]],
+          ['Computazione', [
+            'Redazione di **computi metrici estimativi** mediante **TeamSystem STR**, associati ai modelli BIM.'
+          ]],
+          ['Ricerca e innovazione aziendale', [
+            'Membro della **Commissione BIM**, della **Commissione Computi**, dell’**AI Lab** e del gruppo **Ricerca e Sviluppo (R&D)**.',
+            'Coautore di contributi per **MEGazine** e di pubblicazioni tecniche su riviste come **FABER** e **Le Strade**.',
+            'Ideazione e conduzione di un **seminario interno** su intelligenza artificiale, prompt engineering e Large Language Models (LLM).',
+            'Testing di nuovi software e partecipazione ai programmi di innovazione aziendale legati alla digitalizzazione dei processi BIM.',
+            'Progetto personale, in corso: strumenti digitali, app, report e dashboard per l’analisi, la comunicazione e la valorizzazione dei dati BIM.'
+          ]]
+        ],
+        projects: [
+          ['Linea ferroviaria AV Salerno – Reggio Calabria (SA-RC)', '', ['**Modellazione** di **barriere antirumore FOA** su **33 km** di tratta.', '**Parametrizzazione** dei modelli e compilazione dei **parametri informativi**.', '**Estrazione e redazione di elaborati tecnici.**', '**Redazione ed estrazione di computi metrici.**'], ''],
+          ['Potenziamento ferroviario Messina – Catania (ME-CT) e Palermo – Catania (PA-CT)', '', ['**Barriere antirumore FOA** (ME-CT): vedi voce 09.', '**Piazzali tecnologici** (PA-CT): vedi voce 10.'], ''],
+          ['Linea ferroviaria Torino – Bardonecchia', 'Manutenzione dei ponti: modellazione BIM da nuvola di punti per Digital Twin.', [], 'Scan-to-BIM · Digital Twin'],
+          ['Riqualificazione Nuovo Stadio Artemio Franchi — Firenze', '', [], ''],
+          ['Ponti e viadotti stradali', 'Opere in misto-cementizio e carpenteria metallica.', [], ''],
+          ['Viadotto in Acciaio', 'Attività svolte nell’ambito della commessa, nel filone dei ponti e viadotti stradali (voce 05).', [], ''],
+          ['Digitalizzazione da rilievo', 'Modellazione BIM da nuvole di punti mediante Autodesk ReCap, applicata a opere esistenti tra cui ponti e viadotti. Da questo filone di ricerca è nato il contributo scientifico «BIM-Integrated Parametric Modelling of Existing Box Girder Bridges Using Point Cloud Data».', [], 'Scan-to-BIM · Autodesk ReCap', { label: 'Apri la scheda della pubblicazione', pub: 2 }],
+          ['Standardizzazione BIM', '', ['Redazione e aggiornamento di **template Revit**.', 'Definizione degli **standard grafici** dello studio.', 'Redazione di **linee guida operative** e documentazione di supporto ai flussi di lavoro BIM.'], 'Attività trasversale'],
+          ['Barriere antirumore FOA', 'Progettazione e modellazione nell’ambito delle commesse SA-RC, ME-CT e Jonica.', ['**SA-RC:** modellazione su 33 km di tratta, parametrizzazione, elaborati e computi (voce 01).', '**ME-CT e Jonica:** esperienza maturata nella progettazione e modellazione FOA.'], 'Esperienza trasversale su più commesse'],
+          ['Piazzali tecnologici PA-CT', 'Nell’ambito del potenziamento della linea Palermo – Catania (voce 02).', [], '']
+        ],
+        others: ['Orte – Falconara: attività relative ai sovrappassi.', 'Produzione degli elaborati: modellazione, parametrizzazione ed estrazione di elaborati tecnici e computi metrici nell’ambito delle commesse indicate.'] },
+      { date: 'Giu 2022 — Feb 2023', role: 'Architetto — BIM Specialist', org: 'Studio CABE — Cadacademy & Bim Engineering',
+        summary: 'Modellazione BIM delle Torri UnipolSai di Torino a partire da rilievi con nuvole di punti, con restituzione geometrica e informativa in Autodesk Revit.',
+        points: ['Modellazione di elementi architettonici e strutturali, locali inclusi.', 'Gestione di fasi progettuali, parametri delle famiglie, filtri, abachi e annotazioni.', 'Organizzazione delle informazioni per l’esportazione delle tavole grafiche da cantiere.'] },
+      { date: 'Freelance', role: 'Consulenza occasionale', org: 'Studio di ingegneria edile Mirenda, Milazzo' },
+      { date: 'Lug — Set 2020', role: 'Tirocinio curriculare', org: 'Studio “Bartolo Doria architetto”, Milazzo (ME)' }
+    ],
+    projectsLabel: 'Principali commesse e attività',
+    projectsNote: '10 voci',
+    othersLabel: 'Altre attività',
+    privacy: 'Modelli, tavole e dati delle commesse appartengono a Masera Engineering Group e ai suoi committenti e non sono pubblicati su questo sito.',
+
+    sProjects: 'Progetti',
+    projHead: 'Elaborati accademici nel mondo.',
+    projIntro: 'Selezione dal Portfolio di Architettura del Politecnico di Torino. Clicca un punto nero sulla mappa, o un titolo, per aprire le tavole del progetto.',
+    plates: 'tavole', plate: 'Tavola', prev: 'Tavola precedente', next: 'Tavola successiva', close: 'Chiudi',
+
+    sSkills: 'Competenze',
+    cards: [
+      { name: 'BIM, CAD & modellazione 3D', level: 'Eccellente', n: 4, items: [
+        ['Autodesk Revit', 4, 'Eccellente', 'Ho coordinato 3–4 persone nel corso degli anni.', [
+          ['Modellazione BIM:', 'modellazione avanzata di elementi architettonici e strutturali, carpenterie metalliche e strutture in cemento armato.'],
+          ['Template e famiglie:', 'creazione di template di progetto; modellazione di famiglie parametriche e famiglie nidificate.'],
+          ['Informazioni e abachi:', 'gestione dei parametri informativi e redazione degli abachi.'],
+          ['Documentazione tecnica:', 'redazione e impaginazione di elaborati tecnici.'],
+          ['Gestione del progetto:', 'organizzazione delle viste nel Browser di progetto e utilizzo delle Varianti di progetto.'],
+          ['Esportazione e interoperabilità:', 'pulizia, controllo ed esportazione di file RVT, IFC, DWG e PDF.']]],
+        ['Autodesk Navisworks', 3, 'Ottimo', 'Coordinamento multidisciplinare e clash detection.', [
+          ['Clash detection:', 'all’interno dello stesso modello e tra modelli di opere differenti.'],
+          ['Coordinamento:', 'coordinamento multidisciplinare dei modelli.'],
+          ['Interferenze:', 'analisi, classificazione e gestione delle interferenze.'],
+          ['Reportistica:', 'redazione di report di interferenza LC1, LC2 e LC3.']]],
+        ['AutoCAD', 2, 'Buono', 'So utilizzarlo, ma lo uso solo sporadicamente.']
+      ] },
+      { name: 'Computational Design', level: '', n: 0, items: [
+        ['Grasshopper', 4, 'Eccellente', 'Il mio strumento principale per il Computational Design.'],
+        ['Rhinoceros 8', 3, 'Ottimo', 'Lo uso a un livello ottimale, soprattutto insieme a Grasshopper.'],
+        ['Dynamo', 3, 'Ottimo', 'Collegato a Revit per automatizzare la modellazione e la compilazione dei parametri informativi.'],
+        ['Rhino.Inside.Revit', 0, '', 'Collegamento tra Grasshopper, Rhinoceros 8 e Revit per i flussi di modellazione parametrica.']
+      ] }
+    ],
+    skills: [
+      ['BIM e computi', 0, '', 'TeamSystem STR Vision CPM · computazione metrica associata ai modelli BIM'],
+      ['Rilievo, fotogrammetria e GIS', 2, 'Buono', 'Autodesk ReCap, RealityScan (Epic Games), Agisoft Metashape, CloudCompare, QGIS, RDF'],
+      ['Grafica e impaginazione', 3, 'Ottimo', 'Adobe Illustrator, Adobe InDesign'],
+      ['Rendering e visualizzazione', 2, 'Buono', 'Twinmotion, Enscape, Lumion'],
+      ['Video e audio editing', 2, 'Buono', 'Adobe Premiere, DaVinci Resolve, OBS, Audacity'],
+      ['Produttività e fogli di calcolo', 2, 'Buono', 'Microsoft Office (Word, Excel, PowerPoint), Google Fogli'],
+      ['Linguaggi di programmazione', 1, 'Base', 'Python, GhPython']
+    ],
+    aiLabel: 'AI & Digital Productivity Tools',
+    aiNote: 'Strumenti di intelligenza artificiale e produttività a supporto di ricerca, organizzazione e automazione: non sostituiscono le competenze professionali in architettura e BIM.',
+    aiTools: [
+      ['Claude', 'Ragionamento esteso, analisi di problemi complessi, programmazione e sviluppo di soluzioni digitali.'],
+      ['ChatGPT', 'Supporto alle attività quotidiane, organizzazione del lavoro e automazione di attività ricorrenti.'],
+      ['Gemini', 'Ricerche approfondite, analisi delle informazioni e integrazione con l’ecosistema Google.'],
+      ['Gemini Notebook', 'Ricerca e analisi avanzata di documenti, PDF e raccolte di file a partire dalle fonti caricate.'],
+      ['Notion', 'Database personale e lavorativo: gestione delle informazioni, delle attività e della conoscenza.']
+    ],
+    softwareLabel: 'Software di lavoro',
+    software: ['Autodesk Revit', 'Dynamo', 'Rhinoceros 8', 'Grasshopper', 'Rhino.Inside.Revit', 'AutoCAD', 'TeamSystem STR Vision CPM', 'Autodesk Navisworks', 'Autodesk ReCap'],
+    langLabel: 'Lingue',
+    langs: [['Italiano', 'Madrelingua'], ['Inglese', 'Avanzato'], ['Spagnolo', 'Intermedio']],
+
+    sResearch: 'Ricerca',
+    record: 'Scheda e citazione',
+    abstractLabel: 'Sintesi', citeLabel: 'Come citare', copy: 'Copia citazione', copied: 'Citazione copiata', copyFail: 'Testo selezionato: premi Ctrl+C per copiarlo',
+
+    sCerts: 'Certificazioni',
+    certs: [
+      ['openBIM', 'buildingSMART Foundations', ''],
+      ['Lingua inglese', 'IELTS', 'Politecnico di Torino'],
+      ['Computational Design', 'Learning Grasshopper', '']
+    ],
+
+    sTeach: 'Didattica',
+    teachLead: 'Tutor accademico e collaboratore nei corsi di modellazione parametrica e Computational Design del Politecnico di Torino.',
+    teach: [
+      ['A.A. 2026/2027', [['Advanced parametric design (Architectural drawing)', '01VOGWL · Prof. Marco Caprani · Tutor accademico · Corso in inglese'], ['Modellazione parametrica e algoritmica', '01VVOWL · Prof. Massimiliano Lo Turco · Tutor accademico · Corso in italiano']]],
+      ['A.A. 2025/2026', [['Advanced parametric design (Architectural drawing)', '01VOGPX · Prof. Marco Caprani · Tutor accademico · Corso in inglese'], ['Modellazione parametrica e algoritmica', '01VVOWL · Prof. Massimiliano Lo Turco · Tutor accademico · Corso in italiano'], ['Corso di orientamento — Metaverso per il Patrimonio', 'Prof.ssa Elisabetta Caterina Giovannini · Collaboratore'], ['Corso di orientamento — Prototipazione Rapida 3D per il Patrimonio', 'Prof.ssa Elisabetta Caterina Giovannini · Collaboratore'], ['Corso di orientamento — Riprogettazione Ludica', 'Prof.ssa Ursula Zich · Collaboratore']]],
+      ['A.A. 2024/2025', [['Architettura e progettazione computazionale (Disegno)', '01VPBPQ · Prof. Massimiliano Lo Turco · Tutor accademico · Corso in italiano'], ['Modellazione parametrica e algoritmica B', '01VNOPX · Prof. Andrea Tonin · Tutor accademico · Corso in inglese']]]
+    ],
+
+    sEdu: 'Formazione',
+    edu: [
+      ['2020 — 2023', 'Laurea magistrale in Architettura per il Progetto Sostenibile', 'Politecnico di Torino · 110/110', 'Tesi: Intelligenza artificiale in Architettura. Sviluppo generativo di soluzioni distributive attraverso l’uso di GANN. Relatori: M. Lo Turco, A. Tomalini, E. Pristeri.'],
+      ['Set 2021 — Feb 2022', 'Programma Erasmus+', 'Universidad Politécnica de Madrid, ETS Arquitectura (ETSAM) · Madrid, Spagna', ''],
+      ['2017 — 2020', 'Laurea in Architettura', 'Politecnico di Torino', ''],
+      ['2017', 'Diploma Tecnico Superiore — Turismo', '', '']
+    ],
+
+    sInterests: 'Interessi',
+    areasLabel: 'Aree di interesse',
+    areas: ['BIM + VR', 'Scan to BIM', 'Heritage BIM', 'Project Management', 'Fotogrammetria (laser scanner e droni) e rilievo in loco', 'Digitalizzazione del territorio, GIS', 'Automazioni AI e Vibe Coding', 'Certificazioni e protocolli di sostenibilità', 'Visual Programming Languages', 'Computi metrici estimativi'],
+    hobbyLabel: 'Hobby',
+    hobbies: ['Beach volley', 'Trekking', 'Stampa 3D'],
+
+    sContact: 'Contatti',
+    contactHead: 'Parliamo del prossimo progetto.',
+    contactLine: 'Disponibile per opportunità nel settore AEC: BIM, Computational Design e coordinamento di commessa.',
+    copyEmail: 'Copia indirizzo', emailCopied: 'Indirizzo copiato',
+    footer: 'Curriculum Vitae · Italiano / English',
+    updated: 'Aggiornato a novembre 2026'
+  },
+
+  en: {
+    htmlLang: 'en',
+    skip: 'Skip to content',
+    menu: 'Menu', menuClose: 'Close',
+    nav: [['profilo', '01', 'Profile'], ['esperienza', '02', 'Experience'], ['progetti', '03', 'Projects'], ['competenze', '04', 'Skills'], ['ricerca', '05', 'Research'], ['certificazioni', '06', 'Certifications'], ['didattica', '07', 'Teaching'], ['formazione', '08', 'Education'], ['interessi', '09', 'Interests'], ['contatti', '', 'Contact']],
+    navMain: ['profilo', 'esperienza', 'progetti', 'competenze', 'ricerca', 'certificazioni', 'contatti'],
+    exportLabel: 'Export CV',
+    exportTitle: 'Download the CV as a PDF (Italian, 2 A4 pages)',
+    exportSaved: 'CV saved',
+    exportOpen: 'The PDF opens in a new tab',
+    heroRole: 'Architect · BIM Coordinator · Computational Designer',
+    heroLine: 'I coordinate multidisciplinary BIM projects in public infrastructure and automate workflows with Dynamo, Grasshopper and Rhino.Inside.Revit.',
+    cta: 'Write to me',
+    photoAlt: 'Portrait of Riccardo Grillo',
+    facts: [['Current role', 'BIM Coordinator', 'Masera Engineering Group, since June 2023'], ['Education', 'Master’s degree, 110/110', 'Politecnico di Torino'], ['Teaching', 'University tutor', 'Politecnico di Torino, since 2024/25']],
+
+    sProfile: 'Profile',
+    profileLead: '**Architect** specialised in **BIM** and **Computational Design**, experienced in **architectural and infrastructure design** and in **coordinating complex multidisciplinary projects** in the **public infrastructure** sector.',
+    profileBody: 'I manage and develop **BIM models**, handle the **information coordination** of project teams and streamline workflows with **parametric and algorithmic modelling** and **process automation** in Dynamo, Grasshopper and Rhino.Inside.Revit. Within my company I take part in the BIM Committee, the Quantity Take-off Committee, the AI Lab and the **research and development** group applying **artificial intelligence** to design processes, a subject I first explored in my master’s thesis. I am drawn to digital survey, Scan-to-BIM and photogrammetry: I have modelled existing buildings and infrastructure, including bridges and viaducts, in BIM from point clouds.',
+    pillars: ['Architectural and infrastructure design', 'BIM and information coordination', 'Parametric and algorithmic modelling', 'Process automation', 'Research and development', 'AI applied to architecture'],
+
+    sExp: 'Experience',
+    jobs: [
+      { date: 'Jun 2023 — Present', role: 'Architect — BIM Coordinator', org: 'Masera Engineering Group',
+        groups: [
+          ['BIM development and coordination', [
+            'Development and updating of **BIM models** for the construction sector, integrating **4D** (construction phases and timing) and **5D** (cost estimating) logic.',
+            '**Modelling** of architectural and structural elements and steelwork.',
+            '**Parameterisation** and management of **information data**.',
+            'Production of **technical drawings**, **clash reports** and **control sheets**; **clash detection in Navisworks** and quality control of parameters.',
+            '**Day-to-day coordination** of project BIM resources, with technical support to 3–4 junior modellers / BIM Specialists.',
+            'Definition and spread of **standards, procedures and best practices for BIM Data Management**, centralising in-house know-how.'
+          ]],
+          ['Computational Design and automation', [
+            'Development of **algorithms** in **Grasshopper**, **Dynamo** and **Rhino.Inside.Revit**.',
+            '**Workflow automation**, including the filling of information parameters.',
+            '**Optimisation** of modelling and drawing-production processes.'
+          ]],
+          ['Quantity take-off', [
+            '**Cost estimates and bills of quantities** in **TeamSystem STR**, linked to the BIM models.'
+          ]],
+          ['Research and company innovation', [
+            'Member of the **BIM Committee**, the **Quantity Take-off Committee**, the **AI Lab** and the **Research and Development (R&D)** group.',
+            'Co-author of contributions to **MEGazine** and of technical papers in journals such as **FABER** and **Le Strade**.',
+            'Design and delivery of an **in-house seminar** on artificial intelligence, prompt engineering and Large Language Models (LLMs).',
+            'Testing of new software and company innovation programmes tied to the digitalisation of BIM processes.',
+            'Personal project, in progress: digital tools, apps, reports and dashboards to analyse, communicate and add value to BIM data.'
+          ]]
+        ],
+        projects: [
+          ['High-speed railway line Salerno – Reggio Calabria (SA-RC)', '', ['**Modelling** of **FOA noise barriers** over **33 km** of the line.', '**Parameterisation** of the models and population of the **information parameters**.', '**Extraction and drafting of technical drawings.**', '**Drafting and extraction of bills of quantities.**'], ''],
+          ['Railway upgrade Messina – Catania (ME-CT) and Palermo – Catania (PA-CT)', '', ['**FOA noise barriers** (ME-CT): see item 09.', '**Technology yards** (PA-CT): see item 10.'], ''],
+          ['Turin – Bardonecchia railway line', 'Bridge maintenance: BIM modelling from point clouds for a Digital Twin.', [], 'Scan-to-BIM · Digital Twin'],
+          ['Redevelopment of the new Stadio Artemio Franchi — Florence', '', [], ''],
+          ['Road bridges and viaducts', 'Structures in composite concrete and steel.', [], ''],
+          ['Steel viaduct', 'Activities carried out within the project, as part of the road bridges and viaducts work (item 05).', [], ''],
+          ['Digitisation from survey', 'BIM modelling from point clouds with Autodesk ReCap, applied to existing structures including bridges and viaducts. This line of research led to the scientific paper “BIM-Integrated Parametric Modelling of Existing Box Girder Bridges Using Point Cloud Data”.', [], 'Scan-to-BIM · Autodesk ReCap', { label: 'Open the publication record', pub: 2 }],
+          ['BIM standardisation', '', ['Drafting and updating of **Revit templates**.', 'Definition of the firm’s **graphic standards**.', 'Drafting of **operating guidelines** and supporting documentation for BIM workflows.'], 'Cross-project activity'],
+          ['FOA noise barriers', 'Design and modelling within the SA-RC, ME-CT and Jonica projects.', ['**SA-RC:** modelling over 33 km of the line, parameterisation, drawings and quantities (item 01).', '**ME-CT and Jonica:** experience gained in FOA design and modelling.'], 'Cross-project experience'],
+          ['PA-CT technology yards', 'Within the upgrade of the Palermo – Catania line (item 02).', [], '']
+        ],
+        others: ['Orte – Falconara: work on the overpasses.', 'Production of drawings: modelling, parameterisation and extraction of technical drawings and bills of quantities across the projects listed.'] },
+      { date: 'Jun 2022 — Feb 2023', role: 'Architect — BIM Specialist', org: 'Studio CABE — Cadacademy & Bim Engineering',
+        summary: 'BIM modelling of the UnipolSai Towers in Turin from point-cloud surveys, with geometric and informational delivery in Autodesk Revit.',
+        points: ['Modelling of architectural and structural elements, including rooms.', 'Management of design phases, family parameters, filters, schedules and annotations.', 'Organisation of information for exporting construction drawing sheets.'] },
+      { date: 'Freelance', role: 'Occasional consulting', org: 'Mirenda building engineering firm, Milazzo' },
+      { date: 'Jul — Sep 2020', role: 'Curricular internship', org: '“Bartolo Doria architetto” studio, Milazzo (ME)' }
+    ],
+    projectsLabel: 'Main projects and activities',
+    projectsNote: '10 items',
+    othersLabel: 'Other activities',
+    privacy: 'Models, drawings and project data belong to Masera Engineering Group and its clients and are not published on this site.',
+
+    sProjects: 'Projects',
+    projHead: 'Academic work around the map.',
+    projIntro: 'A selection from my Politecnico di Torino Architecture Portfolio. Click a black dot on the map, or a title, to open the project plates.',
+    plates: 'plates', plate: 'Plate', prev: 'Previous plate', next: 'Next plate', close: 'Close',
+
+    sSkills: 'Skills',
+    cards: [
+      { name: 'BIM, CAD & 3D modelling', level: 'Excellent', n: 4, items: [
+        ['Autodesk Revit', 4, 'Excellent', 'I have coordinated 3–4 people over the years.', [
+          ['BIM modelling:', 'advanced modelling of architectural and structural elements, steel framing and reinforced-concrete structures.'],
+          ['Templates and families:', 'creation of project templates; modelling of parametric and nested families.'],
+          ['Information and schedules:', 'management of information parameters and schedule creation.'],
+          ['Technical documentation:', 'production and sheet layout of technical drawings.'],
+          ['Project management:', 'organisation of views in the Project Browser and use of Design Options.'],
+          ['Export and interoperability:', 'cleaning, checking and export of RVT, IFC, DWG and PDF files.']]],
+        ['Autodesk Navisworks', 3, 'Very good', 'Multidisciplinary coordination and clash detection.', [
+          ['Clash detection:', 'within the same model and between models of different works.'],
+          ['Coordination:', 'multidisciplinary coordination of models.'],
+          ['Clashes:', 'analysis, classification and management of clashes.'],
+          ['Reporting:', 'clash reports at levels LC1, LC2 and LC3.']]],
+        ['AutoCAD', 2, 'Good', 'I know how to use it, but only use it occasionally.']
+      ] },
+      { name: 'Computational Design', level: '', n: 0, items: [
+        ['Grasshopper', 4, 'Excellent', 'My main tool for Computational Design.'],
+        ['Rhinoceros 8', 3, 'Very good', 'I use it at a high level, mostly together with Grasshopper.'],
+        ['Dynamo', 3, 'Very good', 'Linked to Revit to automate modelling and the filling of information parameters.'],
+        ['Rhino.Inside.Revit', 0, '', 'Link between Grasshopper, Rhinoceros 8 and Revit for parametric modelling workflows.']
+      ] }
+    ],
+    skills: [
+      ['BIM and quantity take-off', 0, '', 'TeamSystem STR Vision CPM · quantity take-off linked to BIM models'],
+      ['Survey, photogrammetry and GIS', 2, 'Good', 'Autodesk ReCap, RealityScan (Epic Games), Agisoft Metashape, CloudCompare, QGIS, RDF'],
+      ['Graphics and layout', 3, 'Very good', 'Adobe Illustrator, Adobe InDesign'],
+      ['Rendering and visualisation', 2, 'Good', 'Twinmotion, Enscape, Lumion'],
+      ['Video and audio editing', 2, 'Good', 'Adobe Premiere, DaVinci Resolve, OBS, Audacity'],
+      ['Productivity and spreadsheets', 2, 'Good', 'Microsoft Office (Word, Excel, PowerPoint), Google Sheets'],
+      ['Programming languages', 1, 'Basic', 'Python, GhPython']
+    ],
+    aiLabel: 'AI & Digital Productivity Tools',
+    aiNote: 'Artificial-intelligence and productivity tools that support research, organisation and automation: they do not replace professional skills in architecture and BIM.',
+    aiTools: [
+      ['Claude', 'Extended reasoning, analysis of complex problems, programming and development of digital solutions.'],
+      ['ChatGPT', 'Support for daily tasks, work organisation and automation of recurring tasks.'],
+      ['Gemini', 'In-depth research, analysis of information and integration with the Google ecosystem.'],
+      ['Gemini Notebook', 'Advanced research and analysis of documents, PDFs and file collections based on the uploaded sources.'],
+      ['Notion', 'Personal and work database: management of information, tasks and knowledge.']
+    ],
+    softwareLabel: 'Working software',
+    software: ['Autodesk Revit', 'Dynamo', 'Rhinoceros 8', 'Grasshopper', 'Rhino.Inside.Revit', 'AutoCAD', 'TeamSystem STR Vision CPM', 'Autodesk Navisworks', 'Autodesk ReCap'],
+    langLabel: 'Languages',
+    langs: [['Italian', 'Native'], ['English', 'Advanced'], ['Spanish', 'Intermediate']],
+
+    sResearch: 'Research',
+    record: 'Record and citation',
+    abstractLabel: 'Summary', citeLabel: 'How to cite', copy: 'Copy citation', copied: 'Citation copied', copyFail: 'Text selected: press Ctrl+C to copy it',
+
+    sCerts: 'Certifications',
+    certs: [
+      ['openBIM', 'buildingSMART Foundations', ''],
+      ['English language', 'IELTS', 'Politecnico di Torino'],
+      ['Computational Design', 'Learning Grasshopper', '']
+    ],
+
+    sTeach: 'Teaching',
+    teachLead: 'Academic tutor and collaborator in the parametric modelling and Computational Design courses at Politecnico di Torino.',
+    teach: [
+      ['A.Y. 2026/2027', [['Advanced parametric design (Architectural drawing)', '01VOGWL · Prof. Marco Caprani · Academic tutor · Taught in English'], ['Modellazione parametrica e algoritmica', '01VVOWL · Prof. Massimiliano Lo Turco · Academic tutor · Taught in Italian']]],
+      ['A.Y. 2025/2026', [['Advanced parametric design (Architectural drawing)', '01VOGPX · Prof. Marco Caprani · Academic tutor · Taught in English'], ['Modellazione parametrica e algoritmica', '01VVOWL · Prof. Massimiliano Lo Turco · Academic tutor · Taught in Italian'], ['Orientation course — Metaverso per il Patrimonio', 'Prof. Elisabetta Caterina Giovannini · Collaborator'], ['Orientation course — Prototipazione Rapida 3D per il Patrimonio', 'Prof. Elisabetta Caterina Giovannini · Collaborator'], ['Orientation course — Riprogettazione Ludica', 'Prof. Ursula Zich · Collaborator']]],
+      ['A.Y. 2024/2025', [['Architettura e progettazione computazionale (Disegno)', '01VPBPQ · Prof. Massimiliano Lo Turco · Academic tutor · Taught in Italian'], ['Modellazione parametrica e algoritmica B', '01VNOPX · Prof. Andrea Tonin · Academic tutor · Taught in English']]]
+    ],
+
+    sEdu: 'Education',
+    edu: [
+      ['2020 — 2023', 'Master’s degree in Architecture for Sustainable Design', 'Politecnico di Torino · 110/110', 'Thesis: Artificial Intelligence in Architecture. Generative development of layout solutions using GANN. Supervisors: M. Lo Turco, A. Tomalini, E. Pristeri.'],
+      ['Sep 2021 — Feb 2022', 'Erasmus+ programme', 'Universidad Politécnica de Madrid, ETS Arquitectura (ETSAM) · Madrid, Spain', ''],
+      ['2017 — 2020', 'Bachelor’s degree in Architecture', 'Politecnico di Torino', ''],
+      ['2017', 'Higher Technical Diploma — Tourism', '', '']
+    ],
+
+    sInterests: 'Interests',
+    areasLabel: 'Areas of interest',
+    areas: ['BIM + VR', 'Scan to BIM', 'Heritage BIM', 'Project Management', 'Photogrammetry (laser scanner and drones) and on-site survey', 'Digitisation of the territory, GIS', 'AI automation and Vibe Coding', 'Sustainability certifications and protocols', 'Visual Programming Languages', 'Cost estimating and quantity take-off'],
+    hobbyLabel: 'Hobbies',
+    hobbies: ['Beach volleyball', 'Hiking', '3D printing'],
+
+    sContact: 'Contact',
+    contactHead: 'Let’s talk about the next project.',
+    contactLine: 'Open to opportunities in the AEC sector: BIM, Computational Design and project coordination.',
+    copyEmail: 'Copy address', emailCopied: 'Address copied',
+    footer: 'Curriculum Vitae · Italiano / English',
+    updated: 'Updated November 2026'
+  }
+};
+
+</script>
+<script>
+(function () {
+  'use strict';
+
+  /* ---------- utilità ---------- */
+  const $ = (s, r) => (r || document).querySelector(s);
+  const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
+  const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const rich = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
+  const pick = (o, lang) => (o && typeof o === 'object' && !Array.isArray(o)) ? (o[lang] != null ? o[lang] : o.it) : o;
+  const pad = (n) => String(n).padStart(2, '0');
+  const segs = (n) => '<span class="segs" aria-hidden="true">' + [1, 2, 3, 4].map((i) => '<i' + (i <= n ? ' class="on"' : '') + '></i>').join('') + '</span>';
+  const ICON_EXT = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>';
+  const ICON_DL = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>';
+  const ICON_L = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>';
+  const ICON_R = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>';
+  const ext = 'target="_blank" rel="noopener noreferrer"';
+
+  /* Dentro l'anteprima Artifact di claude.ai i link <a download> sono inerti:
+     in quel caso il PDF viene consegnato con la capability "downloads". */
+  const IN_ARTIFACT = !!(window.claude && typeof window.claude.use === 'function');
+  let downloads = null;
+  if (IN_ARTIFACT) {
+    try { window.claude.use('downloads').then((ns) => { downloads = ns; }).catch(() => {}); } catch (e) { /* non disponibile */ }
+  }
+
+  let lang = 'it';
+  try { const v = localStorage.getItem('rg-lang'); if (v === 'en' || v === 'it') lang = v; } catch (e) { /* storage non disponibile */ }
+
+  const ROW_YS = [55, 143, 231, 319, 407, 496];
+
+  /* ---------- blocchi ---------- */
+  const exportLink = (t, cls, withIcon) =>
+    '<a class="' + cls + ' js-export" href="' + CV_PDF.href + '"' + (IN_ARTIFACT ? ' ' + ext : ' download="' + CV_PDF.name + '"') +
+    ' type="application/pdf" title="' + esc(t.exportTitle) + '">' + (withIcon ? ICON_DL : '') + esc(t.exportLabel) + '</a>';
+
+  const secLabel = (num, label) => '<div class="split__label"><h2 class="eyebrow">' + (num ? num + ' — ' : '') + esc(label) + '</h2></div>';
+
+  function header(t) {
+    const main = t.nav.filter((n) => t.navMain.indexOf(n[0]) > -1);
+    return '<div class="wrap header__in">' +
+      '<a class="brand" href="#top">Riccardo Grillo</a>' +
+      '<nav class="nav" aria-label="' + (lang === 'en' ? 'Main sections' : 'Sezioni principali') + '">' + main.map((n) => '<a href="#' + n[0] + '" data-nav="' + n[0] + '">' + esc(n[2]) + '</a>').join('') + '</nav>' +
+      '<div class="header__tools">' +
+        '<div class="lang" role="group" aria-label="Lingua / Language">' +
+          '<button type="button" data-lang="it" aria-pressed="' + (lang === 'it') + '" lang="it">IT</button>' +
+          '<button type="button" data-lang="en" aria-pressed="' + (lang === 'en') + '" lang="en">EN</button>' +
+        '</div>' +
+        exportLink(t, 'btn btn--line btn--sm', false) +
+        '<button type="button" class="menu-btn" aria-expanded="false" aria-controls="drawer"><span aria-hidden="true"></span>' + esc(t.menu) + '</button>' +
+      '</div></div>' +
+      '<div class="drawer" id="drawer" hidden><nav class="wrap" aria-label="' + (lang === 'en' ? 'All sections' : 'Tutte le sezioni') + '"><ol>' +
+        t.nav.map((n) => '<li><a href="#' + n[0] + '" data-nav="' + n[0] + '"><span>' + (n[1] || '—') + '</span>' + esc(n[2]) + '</a></li>').join('') +
+      '</ol><div style="padding:0 0 20px">' + exportLink(t, 'btn btn--line', true) + '</div></nav></div>';
+  }
+
+  function hero(t) {
+    return '<section id="top" class="wrap hero" aria-label="Riccardo Grillo">' +
+      '<div class="hero__grid"><div class="hero__text">' +
+        '<p class="hero__role">' + esc(t.heroRole) + '</p>' +
+        '<h1>Riccardo<br>Grillo</h1>' +
+        '<p class="hero__line">' + esc(t.heroLine) + '</p>' +
+        '<div class="hero__cta"><a class="btn btn--dark" href="mailto:' + EMAIL + '">' + esc(t.cta) + '</a>' + exportLink(t, 'btn btn--line', true) + '</div>' +
+      '</div><div class="hero__photo"><img src="assets/img/riccardo-grillo.jpg" alt="' + esc(t.photoAlt) + '" width="720" height="881" fetchpriority="high"></div></div>' +
+      '<dl class="facts">' + t.facts.map((f) => '<div class="fact"><dt class="label">' + esc(f[0]) + '</dt><dd style="margin:0"><div class="fact__v">' + esc(f[1]) + '</div><div class="fact__s">' + esc(f[2]) + '</div></dd></div>').join('') + '</dl>' +
+    '</section>';
+  }
+
+  function profile(t) {
+    return '<section id="profilo" class="band" aria-labelledby="h-profilo"><div class="wrap sec split">' +
+      secLabel('01', t.sProfile).replace('<h2', '<h2 id="h-profilo"') +
+      '<div class="split__body profile">' +
+        '<p class="profile__lead">' + rich(t.profileLead) + '</p>' +
+        '<p class="profile__body">' + rich(t.profileBody) + '</p>' +
+        '<ul class="pillars">' + t.pillars.map((p, i) => '<li><span>' + pad(i + 1) + '</span>' + esc(p) + '</li>').join('') + '</ul>' +
+      '</div></div></section>';
+  }
+
+  const dashList = (arr, small) => '<ul class="dash' + (small ? ' dash--sm' : '') + '">' + arr.map((x) => '<li><span>' + rich(x) + '</span></li>').join('') + '</ul>';
+
+  function experience(t) {
+    const jobs = t.jobs.map((j) => {
+      let h = '<article class="job"><div class="job__date">' + esc(j.date) + '</div><div class="job__main">' +
+        '<h3>' + esc(j.role) + '</h3><div class="job__org">' + esc(j.org) + '</div>';
+      if (j.summary) h += '<p class="job__summary">' + esc(j.summary) + '</p>';
+      if (j.points) h += dashList(j.points);
+      if (j.groups) {
+        h += '<div class="groups">' + j.groups.map((g, gi) => '<div class="group' + (gi === 0 ? ' group--wide' : '') + '"><h4 class="label" style="margin:0">' + esc(g[0]) + '</h4>' + dashList(g[1]) + '</div>').join('') + '</div>';
+      }
+      if (j.projects) {
+        h += '<div class="commesse"><div class="commesse__head"><h4 class="label" style="margin:0">' + esc(t.projectsLabel) + '</h4><span class="commesse__note">' + esc(t.projectsNote) + '</span></div><ol>' +
+          j.projects.map((p, i) => '<li class="pr" id="commessa-' + pad(i + 1) + '"><span class="pr__n" aria-hidden="true">' + pad(i + 1) + '</span><div class="pr__b">' +
+            '<div class="pr__t">' + esc(p[0]) + '</div>' +
+            (p[1] ? '<div class="pr__d">' + rich(p[1]) + '</div>' : '') +
+            (p[2] && p[2].length ? dashList(p[2], true) : '') +
+            (p[3] ? '<div class="pr__tags">' + esc(p[3]) + '</div>' : '') +
+            (p[4] ? '<div class="pr__link"><button type="button" class="link" data-pub="' + p[4].pub + '">' + esc(p[4].label) + '</button></div>' : '') +
+          '</div></li>').join('') + '</ol>';
+        if (j.others) h += '<div class="others"><h4 class="label" style="margin:0">' + esc(t.othersLabel) + '</h4><ul>' + j.others.map((o) => '<li>' + esc(o) + '</li>').join('') + '</ul></div>';
+        h += '</div><p class="privacy">' + esc(t.privacy) + '</p>';
+      }
+      return h + '</div></article>';
+    }).join('');
+    return '<section id="esperienza" aria-labelledby="h-esperienza"><div class="wrap sec split">' +
+      secLabel('02', t.sExp).replace('<h2', '<h2 id="h-esperienza"') + '<div class="split__body">' + jobs + '</div></div></section>';
+  }
+
+  function projects(t) {
+    const rows = PROJECTS.map((p, i) => {
+      const located = p.located !== false;
+      const left = located ? (p.lon + 9) / 30 * 100 + (p.dx || 0) : 0;
+      const top = located ? (51 - p.lat) / 19.5 * 100 + (p.dy || 0) : 0;
+      const mx = left / 100 * 640, my = top / 100 * 551, ex = 676, ey = ROW_YS[i];
+      const c1 = mx + (ex - mx) * 0.55, c2 = ex - (ex - mx) * 0.35;
+      return { p: p, i: i, located: located, left: left, top: top, ey: ey,
+        d: 'M' + mx.toFixed(1) + ' ' + my.toFixed(1) + ' C' + c1.toFixed(1) + ' ' + my.toFixed(1) + ', ' + c2.toFixed(1) + ' ' + ey + ', ' + ex + ' ' + ey };
+    });
+    const markers = rows.filter((r) => r.located);
+    return '<section id="progetti" style="border-top:1px solid var(--line)" aria-labelledby="h-progetti"><div class="wrap sec">' +
+      '<div class="proj-head"><div><div class="eyebrow">03 — ' + esc(t.sProjects) + '</div><h2 id="h-progetti">' + esc(t.projHead) + '</h2></div><p>' + esc(t.projIntro) + '</p></div>' +
+      '<div class="pj-stage">' +
+        '<div class="pj-map"><img src="assets/img/mappa.svg" alt="" aria-hidden="true" width="1000" height="861" decoding="async">' +
+          markers.map((r) => '<button type="button" class="mk" data-proj="' + r.p.id + '" style="left:' + r.left.toFixed(2) + '%;top:' + r.top.toFixed(2) + '%" aria-label="' + esc(r.p.name + ' — ' + pick(r.p.place, lang)) + '"><i></i></button>').join('') +
+        '</div>' +
+        '<svg class="pj-arcs" viewBox="0 0 1000 551" preserveAspectRatio="none" aria-hidden="true">' + markers.map((r) => '<path data-arc="' + r.p.id + '" d="' + r.d + '"></path>').join('') + '</svg>' +
+        rows.map((r) => '<div class="pj-row" style="--y:' + (r.ey / 551 * 100).toFixed(2) + '%"><button type="button" data-proj="' + r.p.id + '">' +
+          '<span class="pj-row__n">' + esc(r.p.name) + '</span>' +
+          '<span class="pj-row__s">' + esc(r.p.short ? pick(r.p.short, lang) : pick(r.p.course, lang) + ' · ' + pick(r.p.place, lang)) + '</span>' +
+          '<span class="pj-row__c">' + r.p.plates + ' ' + esc(t.plates) + (r.p.note ? ' <em>· ' + esc(pick(r.p.note, lang)) + '</em>' : '') + '</span>' +
+        '</button></div>').join('') +
+      '</div></div></section>';
+  }
+
+  function skillRow(it) {
+    const bul = it[4] ? '<ul class="dash">' + it[4].map((b) => '<li><span><b>' + esc(b[0]) + '</b> ' + esc(b[1]) + '</span></li>').join('') + '</ul>' : '';
+    return '<div class="sk"><div class="sk__n">' + esc(it[0]) + '</div>' +
+      '<div class="sk__l">' + (it[1] ? '<span>' + esc(it[2]) + '</span>' + segs(it[1]) : '') + '</div>' +
+      '<div class="sk__d">' + esc(it[3]) + bul + '</div></div>';
+  }
+
+  function skills(t) {
+    const cards = t.cards.map((c) => '<div class="card"><div class="card__head"><h3>' + esc(c.name) + '</h3>' +
+      (c.n ? '<div class="lvl"><b>' + esc(c.level) + '</b>' + segs(c.n) + '</div>' : '') + '</div>' + c.items.map(skillRow).join('') + '</div>').join('');
+    const grid = '<div class="grid2">' + t.skills.map((s) => '<div class="cell"><div class="cell__h"><h3>' + esc(s[0]) + '</h3>' +
+      (s[1] ? '<div class="lvl"><span>' + esc(s[2]) + '</span>' + segs(s[1]) + '</div>' : '') + '</div><p>' + esc(s[3]) + '</p></div>').join('') + '</div>';
+    const ai = '<div><h3 class="label" style="margin:0">' + esc(t.aiLabel) + '</h3><p class="note">' + esc(t.aiNote) + '</p>' +
+      '<div class="grid2" style="margin-top:16px">' + t.aiTools.map((a) => '<div class="cell cell--ai"><h3>' + esc(a[0]) + '</h3><p>' + esc(a[1]) + '</p></div>').join('') + '</div></div>';
+    const lower = '<div class="lower"><div><h3 class="label" style="margin:0">' + esc(t.softwareLabel) + '</h3><ul class="chips">' + t.software.map((s) => '<li>' + esc(s) + '</li>').join('') + '</ul></div>' +
+      '<div><h3 class="label" style="margin:0">' + esc(t.langLabel) + '</h3><ul class="langs">' + t.langs.map((l) => '<li><span>' + esc(l[0]) + '</span><span>' + esc(l[1]) + '</span></li>').join('') + '</ul></div></div>';
+    return '<section id="competenze" class="band" aria-labelledby="h-competenze"><div class="wrap sec split">' +
+      secLabel('04', t.sSkills).replace('<h2', '<h2 id="h-competenze"') + '<div class="split__body skills">' + cards + grid + ai + lower + '</div></div></section>';
+  }
+
+  function research(t) {
+    return '<section id="ricerca" aria-labelledby="h-ricerca"><div class="wrap sec split">' +
+      secLabel('05', t.sResearch).replace('<h2', '<h2 id="h-ricerca"') + '<div class="split__body">' +
+      PUBS.map((p, i) => '<article class="pub"><div class="pub__k">' + esc(pick(p.kind, lang)) + '</div><div class="pub__b">' +
+        '<h3>' + esc(p.title) + '</h3>' +
+        '<div class="pub__au">' + esc(p.authors) + '</div>' +
+        '<div class="pub__v">' + esc(pick(p.venue, lang)) + '</div>' +
+        '<div class="pub__act"><a href="' + p.cta.href + '" ' + ext + '>' + esc(pick(p.cta, lang)) + ICON_EXT + '</a>' +
+        '<button type="button" class="link" data-pub="' + i + '">' + esc(t.record) + '</button></div>' +
+      '</div></article>').join('') + '</div></div></section>';
+  }
+
+  function certs(t) {
+    return '<section id="certificazioni" class="band" aria-labelledby="h-cert"><div class="wrap sec split">' +
+      secLabel('06', t.sCerts).replace('<h2', '<h2 id="h-cert"') + '<div class="split__body"><div class="certs">' +
+      t.certs.map((c) => '<article class="cert"><div class="cert__k">' + esc(c[0]) + '</div><h3>' + esc(c[1]) + '</h3><div class="cert__o">' + esc(c[2]) + '</div></article>').join('') +
+      '</div></div></div></section>';
+  }
+
+  function teaching(t) {
+    return '<section id="didattica" aria-labelledby="h-didattica"><div class="wrap sec split">' +
+      secLabel('07', t.sTeach).replace('<h2', '<h2 id="h-didattica"') + '<div class="split__body teach"><p class="lead">' + esc(t.teachLead) + '</p><div>' +
+      t.teach.map((y) => '<div class="yr"><div class="yr__y">' + esc(y[0]) + '</div><ul>' + y[1].map((c) => '<li><div class="yr__t">' + esc(c[0]) + '</div><div class="yr__m">' + esc(c[1]) + '</div></li>').join('') + '</ul></div>').join('') +
+      '</div></div></div></section>';
+  }
+
+  function education(t) {
+    return '<section id="formazione" class="band" aria-labelledby="h-formazione"><div class="wrap sec split">' +
+      secLabel('08', t.sEdu).replace('<h2', '<h2 id="h-formazione"') + '<div class="split__body">' +
+      t.edu.map((e) => '<article class="edu"><div class="job__date">' + esc(e[0]) + '</div><div class="job__main"><h3>' + esc(e[1]) + '</h3>' +
+        (e[2] ? '<div class="job__org">' + esc(e[2]) + '</div>' : '') + (e[3] ? '<p class="job__summary">' + esc(e[3]) + '</p>' : '') + '</div></article>').join('') +
+      '</div></div></section>';
+  }
+
+  function interests(t) {
+    return '<section id="interessi" aria-labelledby="h-interessi"><div class="wrap sec split">' +
+      secLabel('09', t.sInterests).replace('<h2', '<h2 id="h-interessi"') + '<div class="split__body interests">' +
+      '<div><h3 class="label" style="margin:0">' + esc(t.areasLabel) + '</h3><ul class="plain plain--grid">' + t.areas.map((a) => '<li>' + esc(a) + '</li>').join('') + '</ul></div>' +
+      '<div><h3 class="label" style="margin:0">' + esc(t.hobbyLabel) + '</h3><ul class="plain">' + t.hobbies.map((a) => '<li>' + esc(a) + '</li>').join('') + '</ul></div>' +
+      '</div></div></section>';
+  }
+
+  function contact(t) {
+    return '<section id="contatti" class="contact" aria-labelledby="h-contatti"><div class="wrap sec">' +
+      '<div class="eyebrow">' + esc(t.sContact) + '</div><h2 id="h-contatti">' + esc(t.contactHead) + '</h2><p>' + esc(t.contactLine) + '</p>' +
+      '<div class="contact__cta"><a class="btn btn--light" href="mailto:' + EMAIL + '">' + EMAIL + '</a>' +
+      '<a class="btn btn--ghost" href="' + LINKEDIN + '" ' + ext + '>LinkedIn</a>' +
+      exportLink(t, 'btn btn--ghost', true) + '</div>' +
+      '<div class="foot"><span>Riccardo Grillo · <button type="button" class="link js-copy-email" style="color:inherit;font-size:13px">' + esc(t.copyEmail) + '</button></span><span>' + esc(t.footer) + ' · ' + esc(t.updated) + '</span></div>' +
+      '</div></section>';
+  }
+
+  /* ---------- render ---------- */
+  function render() {
+    const t = T[lang];
+    document.documentElement.lang = t.htmlLang;
+    $('.skip').textContent = t.skip;
+    $('#header').innerHTML = header(t);
+    $('#main').innerHTML = hero(t) + profile(t) + experience(t) + projects(t) + skills(t) + research(t) + certs(t) + teaching(t) + education(t) + interests(t) + contact(t);
+    observeSections();
+  }
+
+  /* ---------- nav attiva ---------- */
+  let io = null;
+  function observeSections() {
+    if (io) io.disconnect();
+    if (!('IntersectionObserver' in window)) return;
+    const links = $$('[data-nav]');
+    io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (!en.isIntersecting) return;
+        const id = en.target.id;
+        links.forEach((a) => a.setAttribute('aria-current', a.dataset.nav === id ? 'true' : 'false'));
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    $$('#main > section[id]').forEach((s) => io.observe(s));
+  }
+
+  /* ---------- toast ---------- */
+  let toastTimer = 0;
+  function toast(msg) {
+    const el = $('#toast');
+    el.textContent = msg; el.classList.add('is-on');
+    clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove('is-on'), 2600);
+  }
+
+  /* ---------- tavole ---------- */
+  const dlgPlates = $('#dlg-plates');
+  let cur = null, plate = 0, lastFocus = null;
+  const plateUrl = (p, i) => 'assets/plates/' + p.id + '-' + pad(i + 1) + '.jpg';
+  function showPlate() {
+    const t = T[lang];
+    const img = $('#plate-img');
+    img.classList.add('is-loading');
+    img.onload = () => img.classList.remove('is-loading');
+    img.src = plateUrl(cur, plate);
+    img.alt = cur.name + ' — ' + t.plate.toLowerCase() + ' ' + (plate + 1);
+    $('#plate-count').textContent = t.plate + ' ' + (plate + 1) + ' / ' + cur.plates;
+    [plate + 1, plate - 1].forEach((k) => { const j = (k + cur.plates) % cur.plates; const im = new Image(); im.src = plateUrl(cur, j); });
+  }
+  function openProject(id) {
+    const t = T[lang];
+    cur = PROJECTS.find((p) => p.id === id); if (!cur) return;
+    plate = 0; lastFocus = document.activeElement;
+    $('#plate-title').textContent = cur.name;
+    $('#plate-sub').textContent = pick(cur.course, lang) + ' · ' + pick(cur.place, lang) + (cur.note ? ' · ' + pick(cur.note, lang) : '');
+    $('#plate-prev').setAttribute('aria-label', t.prev);
+    $('#plate-next').setAttribute('aria-label', t.next);
+    $('#plate-close').textContent = t.close;
+    showPlate();
+    dlgPlates.showModal();
+  }
+  function step(d) { if (!cur) return; plate = (plate + d + cur.plates) % cur.plates; showPlate(); }
+
+  /* ---------- scheda pubblicazione ---------- */
+  const dlgPub = $('#dlg-pub');
+  let curPub = null;
+  function openPub(i) {
+    const t = T[lang], p = PUBS[i]; if (!p) return;
+    curPub = p; lastFocus = document.activeElement;
+    const alt = pick(p.alt, lang);
+    const abs = pick(p.abstract, lang);
+    const note = pick(p.note, lang);
+    $('#pub-body').innerHTML =
+      '<div class="pubd__top"><div class="label">' + esc(pick(p.kind, lang)) + '</div><button type="button" class="btn-close btn-close--dark" data-close>' + esc(t.close) + '</button></div>' +
+      '<h3 id="pub-title">' + esc(p.title) + '</h3>' + (alt ? '<div class="pubd__alt">' + esc(alt) + '</div>' : '') +
+      '<p class="pubd__au">' + esc(p.authors) + '</p>' +
+      '<dl>' + pick(p.fields, lang).map((f) => '<div><dt>' + esc(f[0]) + '</dt><dd>' + (f[2] ? '<a href="' + f[2] + '" ' + ext + '>' + esc(f[1]) + '</a>' : esc(f[1])) + '</dd></div>').join('') + '</dl>' +
+      '<div style="margin-top:24px"><a class="btn btn--dark" href="' + p.cta.href + '" ' + ext + '>' + esc(pick(p.cta, lang)) + ICON_EXT.replace('<svg', '<svg style="width:14px;height:14px"') + '</a></div>' +
+      (abs ? '<div class="pubd__sec"><div class="label">' + esc(t.abstractLabel) + '</div><p>' + esc(abs) + '</p></div>' : '') +
+      '<div class="pubd__sec"><div class="label">' + esc(t.citeLabel) + '</div><div class="cite" id="cite">' + esc(pick(p.apa, lang)) + '</div>' +
+      '<div style="margin-top:14px"><button type="button" class="btn btn--dark btn--sm js-copy-cite" style="min-height:44px;padding:0 22px">' + esc(t.copy) + '</button></div></div>' +
+      (note ? '<p class="pubd__note">' + esc(note) + '</p>' : '');
+    dlgPub.showModal();
+    dlgPub.scrollTop = 0;
+  }
+
+  function copyText(text, okMsg, el) {
+    const t = T[lang];
+    const fallback = () => {
+      if (el) { const r = document.createRange(); r.selectNodeContents(el); const s = window.getSelection(); s.removeAllRanges(); s.addRange(r); }
+      toast(t.copyFail);
+    };
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => toast(okMsg), fallback);
+      } else fallback();
+    } catch (e) { fallback(); }
+  }
+
+  /* ---------- esporta CV ---------- */
+  function exportCv(e) {
+    const t = T[lang];
+    if (downloads) {
+      e.preventDefault();
+      fetch(CV_PDF.href).then((r) => { if (!r.ok) throw new Error('fetch'); return r.blob(); })
+        .then((blob) => downloads.save({ filename: CV_PDF.name, data: blob }))
+        .then(() => toast(t.exportSaved))
+        .catch((err) => { if (!err || err.code !== 'declined') toast(t.exportOpen); });
+    }
+    /* altrimenti: comportamento nativo del link (download diretto del file originale) */
+  }
+
+  /* ---------- eventi ---------- */
+  document.addEventListener('click', (e) => {
+    const el = e.target.closest('button, a');
+    if (!el) return;
+    if (el.matches('[data-lang]')) {
+      if (el.dataset.lang === lang) return;
+      const anchor = $$('#main > section[id]').find((s) => s.getBoundingClientRect().bottom > 80);
+      const off = anchor ? anchor.getBoundingClientRect().top : 0;
+      lang = el.dataset.lang;
+      try { localStorage.setItem('rg-lang', lang); } catch (err) { /* ignore */ }
+      render();
+      if (anchor) { const n = document.getElementById(anchor.id); if (n) window.scrollTo({ top: window.scrollY + n.getBoundingClientRect().top - off, behavior: 'instant' }); }
+      const b = $('[data-lang="' + lang + '"]'); if (b) b.focus();
+      return;
+    }
+    if (el.matches('.js-export')) return exportCv(e);
+    if (el.matches('.menu-btn')) {
+      const open = el.getAttribute('aria-expanded') !== 'true';
+      el.setAttribute('aria-expanded', String(open));
+      el.lastChild.textContent = open ? T[lang].menuClose : T[lang].menu;
+      $('#drawer').hidden = !open;
+      return;
+    }
+    if (el.closest('#drawer') && el.matches('a')) {
+      const mb = $('.menu-btn'); mb.setAttribute('aria-expanded', 'false'); mb.lastChild.textContent = T[lang].menu; $('#drawer').hidden = true;
+      return;
+    }
+    if (el.matches('[data-proj]')) return openProject(el.dataset.proj);
+    if (el.matches('[data-pub]')) return openPub(+el.dataset.pub);
+    if (el.matches('#plate-prev')) return step(-1);
+    if (el.matches('#plate-next')) return step(1);
+    if (el.matches('#plate-close')) return dlgPlates.close();
+    if (el.matches('[data-close]')) return dlgPub.close();
+    if (el.matches('.js-copy-cite') && curPub) return copyText(pick(curPub.apa, lang), T[lang].copied, $('#cite'));
+    if (el.matches('.js-copy-email')) return copyText(EMAIL, T[lang].emailCopied, null);
+  });
+
+  /* evidenziazione incrociata mappa ↔ elenco */
+  function setHot(id) {
+    const stage = $('.pj-stage'); if (!stage) return;
+    stage.classList.toggle('has-hot', !!id);
+    $$('[data-proj]', stage).forEach((b) => b.classList.toggle('is-hot', b.dataset.proj === id));
+    $$('[data-arc]', stage).forEach((a) => a.classList.toggle('is-hot', a.dataset.arc === id));
+  }
+  document.addEventListener('mouseover', (e) => { const b = e.target.closest('.pj-stage [data-proj]'); setHot(b ? b.dataset.proj : null); });
+  document.addEventListener('focusin', (e) => { const b = e.target.closest('.pj-stage [data-proj]'); setHot(b ? b.dataset.proj : null); });
+
+  /* chiusura dialoghi cliccando lo sfondo; ripristino focus */
+  dlgPub.addEventListener('click', (e) => { if (e.target === dlgPub) dlgPub.close(); });
+  [dlgPub, dlgPlates].forEach((d) => d.addEventListener('close', () => { if (lastFocus && lastFocus.focus) lastFocus.focus(); }));
+  dlgPlates.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); step(-1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); step(1); }
+  });
+  /* swipe su smartphone */
+  let sx = null;
+  $('.plates__stage').addEventListener('touchstart', (e) => { sx = e.touches[0].clientX; }, { passive: true });
+  $('.plates__stage').addEventListener('touchend', (e) => { if (sx == null) return; const dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 45) step(dx < 0 ? 1 : -1); sx = null; });
+
+  /* bordo header allo scroll */
+  const onScroll = () => { const h = $('#header'); if (h) h.classList.toggle('is-scrolled', window.scrollY > 8); };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !$('#drawer').hidden) { const mb = $('.menu-btn'); mb.click(); mb.focus(); }
+  });
+
+  render();
+  onScroll();
+})();
+
+</script>
+
+</body>
+</html>
